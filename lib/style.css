@@ -1,0 +1,274 @@
+/* Rappels utiles
+    #name : pour les id
+    .name : pour les class
+*/
+
+/* Revoir le fond / margin avec Jean-Francois. */
+
+/* éléments de la page */
+#bloc_page
+    {
+        font-family: "Raleway", sans-serif;
+        font-size: 1em;
+        margin: 0;
+    }
+a
+    {
+        text-decoration: none;
+        color: black;
+    }
+a:visited
+    {
+        color: black;
+    }
+ul
+    {
+        list-style: none;
+    }
+h1
+    {
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+/* HEADER */
+header img
+    {
+        width: 15%;
+        min-width:100px;
+        max-width: 150px;
+    }
+img 
+    {
+        max-width: 100%;
+        height: auto;
+    }
+
+@media screen and (max-width: 900px)
+/* format adapté aux tablettes (en portrait) et aux mobiles en portrait ET paysage */
+    {
+        #logo
+            {    
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+        #logo p
+            {
+                font-size: 100%;
+            }
+        .menu1, .menu2
+            {   
+                border-bottom: #F2F2F2 solid 3px;
+            }
+        .menu1:hover, .menu1 a:hover, .menu2:hover, .menu2 a:hover
+            {
+                border-bottom: #0065FC solid 3px;
+            }
+        .menu3
+            {
+                display: none;
+                border-bottom: none;
+            }
+    }
+
+@media screen and (min-width: 901px)
+/* format adapté aux tablettes (en paysage) et aux ordinateurs */
+    {
+        header
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: center;
+            }
+        .menu1, .menu2, .menu3, .menu3:hover
+            {   
+                border-top: none;
+            }
+        .menu1:hover, .menu2:hover
+            {
+                border-top: #0065FC solid 2px;
+            }
+        .menu1 a, .menu2 a
+            {
+                color: black;
+            }
+        .menu4
+            {
+                display: none;
+            }
+        #navbar
+            {
+                justify-content: flex-end;
+            }
+    }
+
+@media all
+{
+    #navbar
+        {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            text-align: center;
+        }
+    .menu1, .menu2, .menu3, .menu4
+        {   
+            padding: 15px;
+            /* pourquoi des pixels et pas des % ? parce que sinon, cela ne s'adapte pas bien graphiquement parlant aux tablettes */
+            flex: 50%;
+            font-size: 85%;
+        }
+    
+    .menu1:hover, .menu2:hover
+        {
+            color: #0065FC;
+            font-size: 85%;
+        }
+    .menu3, .menu4, .menu3:visited, .menu4:visited
+        {
+            font-weight: bolder;
+            color: #0065FC;
+            font-size: 85%;
+        }
+    .menu3:hover, .menu4:hover
+        {
+            font-weight: normal;
+            color: black;
+            
+        }
+    .edede
+        {
+            font-size: 80%;
+        }
+}
+
+
+
+/* div searchingtool */
+.edede
+{
+    background-color: green;
+}
+.maps
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: min-content;
+    height: 48px;
+    border-top:  #F2F2F2 solid 1px;
+    border-bottom:  #F2F2F2 solid 1px;
+}
+
+
+.maps .fa-map-marker-alt
+{
+    background-color: #F2F2F2;
+    height: 50px;
+    width: 50px;
+    border-bottom-left-radius: 25%;
+    border-top-left-radius: 25%;
+}
+
+.maps input
+{
+    width: 200px;
+    height: 98%;
+    border: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.maps .fa-search
+{
+    background-color: #0065FC;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 25%;
+}
+
+.filtre
+{
+    background-color: blue;
+    width: fit-content;
+    border: black dotted 1px;
+    display: flex;
+}
+
+.filtre .fas
+{
+    background-color: violet;
+    color: #0065FC;
+    height: 40px;
+    width: 40px;
+}
+
+.filtre input
+{
+    height: 40px;
+    width: 150px;
+}
+
+/* autres */
+aside
+{
+    background-color: #F2F2F2;
+}
+
+.popular
+{
+    background-color: yellow;
+}
+
+.bed
+{
+    background-color: white;
+    border-radius: 5%;
+    margin: 5%;
+}
+
+.rooms
+{
+    background-color: white;
+    border-radius: 5%;
+    margin: 5%;
+}
+
+.act
+{
+    background-color: white;
+    border-radius: 5%;
+    margin: 5%;
+}
+#popular img 
+{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+footer
+{
+    background-color: #F2F2F2;
+}
+
+footer ul a
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+footer ul a:hover
+{
+    color: #0065FC; 
+}
