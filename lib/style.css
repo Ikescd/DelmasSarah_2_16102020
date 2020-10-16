@@ -6,6 +6,11 @@
 /* Revoir le fond / margin avec Jean-Francois. */
 
 /* éléments de la page */
+body
+{
+    margin: 0;
+}
+
 #bloc_page
     {
         font-family: "Raleway", sans-serif;
@@ -216,7 +221,7 @@ img
 }
 
 /* autres */
-aside
+/* aside
 {
     background-color: #F2F2F2;
 }
@@ -271,4 +276,4 @@ footer ul a
 footer ul a:hover
 {
     color: #0065FC; 
-}
+} */
