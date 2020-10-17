@@ -6,30 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./lib/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- permet d'avoir accès à la police Raleway -->
-    <script src="https://kit.fontawesome.com/022660c1b2.js" crossorigin="anonymous"></script> <!-- permet d'avoir accès à la bibliothèque fontawesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!-- call api for Raleway font directly, no need to download it -->
+    <script src="https://kit.fontawesome.com/022660c1b2.js" crossorigin="anonymous"></script> <!-- call fontawesome library for icon use -->
     <title>Reservia</title>
 </head>
-
 
 <body>
     <div id="bloc_page">
         <header>
-            <div id="logo">
+            <div id="logo_inscription">
                 <img src="./images/logo/Reservia.svg" alt="logo reservia">
-                <p><a href="#" class="menu4">S'inscrire</a></p>
+                <a href="#" id="inscription">S'inscrire</a>
             </div>
             <nav>
                 <ul id="navbar">
-                    <a href="#hebergement" class="menu1"><li>Hébergements</li></a>
-                    <a href="#activites" class="menu2"><li>Activités</li></a>
-                    <a href="#" class="menu3"><li>S'inscrire</li></a>
+                    <a href="#hebergement" class="menu"><li>Hébergements</li></a>
+                    <a href="#activites" class="menu"><li>Activités</li></a>
+                    
                 </ul>
             </nav>
         </header>
     
-        <div class="edede">
+        <!-- <div class="edede">
             
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p> 
@@ -38,12 +36,11 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <input type="text" value="Marseille, France">
                     <i class="fas fa-search" aria-hidden="true"></i>
-                    <!-- input mis en place mais non fonctionnel comme demandé -->
-        </div>
+        </div> -->
 
 
 
-            <div>
+            <!-- <div>
                 <h2>Filtres</h2>
                 <div class="listes">
 
@@ -64,7 +61,7 @@
                 </div>
 
                 <i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville
-            </div></div>
+            </div></div> -->
         </div>
 
         <!--<section>

@@ -1,28 +1,25 @@
 /* Rappels utiles
     #name : pour les id
     .name : pour les class
+    top right bottom left : pour les marging et padding
 */
 
-/* Revoir le fond / margin avec Jean-Francois. */
-
 /* éléments de la page */
-body
-{
-    margin: 0;
-}
-
-#bloc_page
+body 
     {
+        /* margin: 0; */
         font-family: "Raleway", sans-serif;
         font-size: 1em;
+        margin: 0;
     }
-a
+img 
+    {
+        max-width: 100%;
+        height: auto;
+    }
+a, a:visited, a:hover
     {
         text-decoration: none;
-        color: black;
-    }
-a:visited
-    {
         color: black;
     }
 ul
@@ -32,62 +29,120 @@ ul
 h1
     {
         font-weight: bolder;
+        font-size: 2em;
+    }
+h2
+    {
+        color: blue;
         font-size: 20px;
     }
 
 /* HEADER */
-header img
+
+    .menu1:hover
+        {
+            color: #0065FC;
+        }
+    #inscription, #inscription:visited
+        {
+            font-weight: bolder;
+            color: #0065FC;
+        }
+    #inscription:hover
+        {
+            color: black;
+        }
+    ul
     {
-        width: 15%;
-        min-width:100px;
-        max-width: 150px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        max-width: 900px;
+        opacity: 0.6;
+        justify-content: space-evenly;
     }
-img 
-    {
-        max-width: 100%;
-        height: auto;
-    }
+    ul a
+        {
+        flex: 50%;
+        width: auto;
+        opacity: 0.6;
+        text-align: center;
+        }
+    
+
 
 @media screen and (max-width: 900px)
 /* format adapté aux tablettes (en portrait) et aux mobiles en portrait ET paysage */
     {
-        #logo
-            {    
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 10px;
-            }
-        #logo p
+        body /* appui pour le css */
+    {
+        background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017020729793609.png');
+        background-position: top no-repeat;
+        background-size: 100%;
+    }
+        
+        #logo_inscription img
             {
-                font-size: 100%;
+                position: absolute;
+                top: 25px;
+                left: 20px;
             }
-        .menu1, .menu2
-            {   
-                border-bottom: #F2F2F2 solid 3px;
-            }
-        .menu1:hover, .menu1 a:hover, .menu2:hover, .menu2 a:hover
+        #inscription
             {
-                border-bottom: #0065FC solid 3px;
+                position: absolute;
+                top: 40px;
+                right: 20px;
             }
-        .menu3
+
+        #navbar
             {
-                display: none;
-                border-bottom: none;
+                margin-top: 95px;
+                padding-bottom: 15px;
+                border-bottom: #0065FC solid 2px;
             }
     }
 
 @media screen and (min-width: 901px)
 /* format adapté aux tablettes (en paysage) et aux ordinateurs */
+    
+         /* appui pour le css */
     {
-        header
+        body
+    {
+        background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017020729793609.png');
+        background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017044830474699.png');
+        background-position: top no-repeat;
+        background-size: 100%;
+        color: black;
+    }
+        #logo_inscription img
+            {    
+                position: absolute;
+                top: 45px;
+                left: 55px;
+            }
+
+        #inscription
+            {
+                position: absolute;
+                top: 45px;
+                right: 75px;
+            }
+    /* 
+    
+    /* header
             {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                text-align: center;
             }
-        .menu1, .menu2, .menu3, .menu3:hover
+        #navbar li
+            {
+                display: flex;
+                justify-content: space-between;
+            }
+        .menu1, .menu2, .menu3
             {   
                 border-top: none;
             }
@@ -102,56 +157,17 @@ img
         .menu4
             {
                 display: none;
-            }
-        #navbar
-            {
-                justify-content: flex-end;
-            }
+            } */
+        
     }
 
-@media all
-{
-    #navbar
-        {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            text-align: center;
-        }
-    .menu1, .menu2, .menu3, .menu4
-        {   
-            padding: 15px;
-            /* pourquoi des pixels et pas des % ? parce que sinon, cela ne s'adapte pas bien graphiquement parlant aux tablettes */
-            flex: 50%;
-            font-size: 85%;
-        }
     
-    .menu1:hover, .menu2:hover
-        {
-            color: #0065FC;
-            font-size: 85%;
-        }
-    .menu3, .menu4, .menu3:visited, .menu4:visited
-        {
-            font-weight: bolder;
-            color: #0065FC;
-            font-size: 85%;
-        }
-    .menu3:hover, .menu4:hover
-        {
-            font-weight: normal;
-            color: black;
-            
-        }
-    .edede
-        {
-            font-size: 80%;
-        }
-}
 
 
 
 /* div searchingtool */
+
+/* 
 .edede
 {
     background-color: green;
@@ -217,7 +233,7 @@ img
 {
     height: 40px;
     width: 150px;
-}
+} */
 
 /* autres */
 /* aside
