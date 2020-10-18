@@ -7,184 +7,123 @@
 /* éléments de la page */
 body 
     {
-        /* margin: 0; */
         font-family: "Raleway", sans-serif;
         font-size: 1em;
         margin: 0;
+        padding: 0;
+        margin-top: 90px;
+        /* à supprimer */ background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017020729793609.png');
+        /* à supprimer */ background-position: top no-repeat;
+        /* à supprimer */ background-size: 100%;
     }
 img 
     {
         max-width: 100%;
         height: auto;
     }
-a, a:visited, a:hover
+a, a:visited
     {
         text-decoration: none;
-        color: black;
+        color:black;
     }
+a:hover
+{
+    color: #0065FC;
+}
 ul
     {
         list-style: none;
     }
-h1
+
+
+    /* HEADER COMMUN */
+
+#inscription
     {
         font-weight: bolder;
-        font-size: 2em;
+        color: #0065FC;
     }
-h2
+#inscription:hover
     {
-        color: blue;
-        font-size: 20px;
-    }
-
-/* HEADER */
-
-    .menu1:hover
-        {
-            color: #0065FC;
-        }
-    #inscription, #inscription:visited
-        {
-            font-weight: bolder;
-            color: #0065FC;
-        }
-    #inscription:hover
-        {
-            color: black;
-        }
-    ul
-    {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        max-width: 900px;
-        opacity: 0.6;
-        justify-content: space-evenly;
-    }
-    ul a
-        {
-        flex: 50%;
-        width: auto;
-        opacity: 0.6;
-        text-align: center;
-        }
-    
-
-
-@media screen and (max-width: 900px)
-/* format adapté aux tablettes (en portrait) et aux mobiles en portrait ET paysage */
-    {
-        body /* appui pour le css */
-    {
-        background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017020729793609.png');
-        background-position: top no-repeat;
-        background-size: 100%;
-    }
-        
-        #logo_inscription img
-            {
-                position: absolute;
-                top: 25px;
-                left: 20px;
-            }
-        #inscription
-            {
-                position: absolute;
-                top: 40px;
-                right: 20px;
-            }
-
-        #navbar
-            {
-                margin-top: 95px;
-                padding-bottom: 15px;
-                border-bottom: #0065FC solid 2px;
-            }
-    }
-
-@media screen and (min-width: 901px)
-/* format adapté aux tablettes (en paysage) et aux ordinateurs */
-    
-         /* appui pour le css */
-    {
-        body
-    {
-        background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017020729793609.png');
-        background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017044830474699.png');
-        background-position: top no-repeat;
-        background-size: 100%;
         color: black;
     }
-        #logo_inscription img
-            {    
-                position: absolute;
-                top: 45px;
-                left: 55px;
-            }
-
-        #inscription
-            {
-                position: absolute;
-                top: 45px;
-                right: 75px;
-            }
-    /* 
-    
-    /* header
-            {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        #navbar li
-            {
-                display: flex;
-                justify-content: space-between;
-            }
-        .menu1, .menu2, .menu3
-            {   
-                border-top: none;
-            }
-        .menu1:hover, .menu2:hover
-            {
-                border-top: #0065FC solid 2px;
-            }
-        .menu1 a, .menu2 a
-            {
-                color: black;
-            }
-        .menu4
-            {
-                display: none;
-            } */
-        
+#navbar li:hover
+    {
+        color: #0065FC;
     }
 
-    
 
+    /* HEADER VERSION MOBILE */
 
+#logo_inscription img
+    {
+        position: absolute;
+        top: 25px; left: 20px;
+        /* à supprimer */ background-color: white;
+    }
+#inscription
+    {
+        position: absolute;
+        top: 40px; right: 20px;
+        /* à supprimer */ background-color: white;
+    }
+#navbar
+    {
+        display: block;
+        display:flex;
+        padding: 0px;
+        /* à supprimer */ background-color: white;
+    }
+#navbar li
+    {
+        display:inline;
+        flex: 50%;
+        text-align: center;
+        border-bottom: #F2F2F2 solid 3px;
+    }
+#navbar a
+    {
+        margin: 0;
+        outline: none;
+        display: inline-block;
+        line-height: 40px;
+        width: 170px;
+    }
+#navbar li:hover
+    {
+       border-bottom: #0065FC solid 3px;
+    }
 
-/* div searchingtool */
+    /* DIV SEARCHING_TOOL COMMUN */
 
-/* 
-.edede
-{
-    background-color: green;
-}
+#searching_tool
+    {
+        margin: 30px 20px 0 20px;
+        /* top right bottom left */
+    }
+
+h1
+    {
+        font-size: 1.4em;
+    }
+h1, h2, h3
+    {
+        font-weight: bolder;
+    } 
+
 .maps
 {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     align-items: center;
-    text-align: center;
-    margin: auto;
-    width: min-content;
+    text-align: center; */
+    /* margin: auto;
+    width: min-content; */
     height: 48px;
     border-top:  #F2F2F2 solid 1px;
     border-bottom:  #F2F2F2 solid 1px;
 }
-
+/*
 
 .maps .fa-map-marker-alt
 {
