@@ -12,9 +12,6 @@ body
         margin: 0;
         padding: 0;
         margin-top: 90px;
-        /* à supprimer */ background-image: url('https://nsa40.casimages.com/img/2020/10/17/201017020729793609.png');
-        /* à supprimer */ background-position: top no-repeat;
-        /* à supprimer */ background-size: 100%;
     }
 img 
     {
@@ -55,7 +52,7 @@ ul
 
     /* HEADER VERSION MOBILE */
 
-#logo_inscription img
+#logo_and_inscription img
     {
         position: absolute;
         top: 25px; left: 20px;
@@ -94,140 +91,196 @@ ul
        border-bottom: #0065FC solid 3px;
     }
 
-    /* DIV SEARCHING_TOOL COMMUN */
 
+    /* SEARCHING TOOL */
 #searching_tool
+{
+    margin: 15px;
+}
+    h1
+{
+    font-size: 1.4em;
+}
+
+#maps
+{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 40px;
+    background-color: grey;
+    overflow: hidden;
+    border: grey solid 2px;
+    border-radius: 15px;
+    flex-basis: auto;
+}
+
+#maps input
+{
+    border: none;
+    flex-grow: 1;
+}
+#maps .fa-map-marker-alt
+{
+    color: black;
+    flex-grow: 1;
+}
+
+#maps .fa-search
+{
+    color: white;
+    flex-grow: 1;
+    background-color: blue;
+}
+
+#maps .icon
+{
+    max-width: ;width: 40px;
+    text-align: center;
+}
+
+#preferences_filter
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.filter_list
+{
+    height: 40px;
+    border: grey solid 2px;
+    background-color: lightblue;
+    margin: 10px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.filter_list input
+{
+    text-align: center;
+    max-width: 150px;
+    min-width: 100px;
+    height: 40px;
+    border: none;
+}
+.filter_list i
+{
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+}
+    /* SECTION POPULAR */
+aside, footer
+{
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 25px 0 25px;
+}
+
+.popular_room
     {
-        margin: 30px 20px 0 20px;
-        /* top right bottom left */
+        display: flex;
+        background-color : white;
+        overflow: hidden;
+        height: 125px;
+        width: auto;
+        border-radius: 20px;
+        font-size: 0.9em;
+        box-shadow: 2px 1px 10px #555;
+        border: white solid 5px;
+        margin: 10px;
+    }
+   
+.popular_room_picture
+    {
+        
+        background-color: teal;
     }
 
-h1
+.popular_room_picture img
+{
+    min-height: 100%;
+    width: 100%;
+}
+
+.popular_room_description
+{
+    margin-left: 20px;
+    min-width: 175px;
+}
+    
+    /* SECTION HEBERGEMENTS */
+
+    h2
     {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
-h1, h2, h3
+    
+    h3
+    {
+        font-size: 1em;
+    }
+    
+    article
+    {
+        margin: 10px;
+    }
+    
+    .room, .activity
+    {
+        margin: 10px;
+        overflow: hidden;
+        height: 175px;
+        max-width: 330px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        box-shadow: 2px 1px 10px #555;
+    }
+
+    .room
+    {
+        border: white solid 5px;
+    }
+    
+    .room_picture, .activity_picture
+    {
+        width: 330px;
+        max-height: 105px;
+        overflow: hidden;
+    }
+    
+    .room_description, .activity_description
+    {
+        margin-left: 15px;
+        margin-top: -5px;
+        line-height: 1.5em;
+        font-size: 0.9em;
+    }
+    
+    .room_name, .activity_name
     {
         font-weight: bolder;
-    } 
+        font-size: 1.1em;
+    }
+    .room_price
+    {
+        font-weight: bolder;
+    }
+    
+    .fas
+    {
+        color: blue;
+        margin-top: 5px;
+        font-size: 0.9em;
+    }
+    .star_grey
+    {
+        color: grey;
+    }
 
-.maps
-{
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center; */
-    /* margin: auto;
-    width: min-content; */
-    height: 48px;
-    border-top:  #F2F2F2 solid 1px;
-    border-bottom:  #F2F2F2 solid 1px;
-}
-/*
-
-.maps .fa-map-marker-alt
-{
-    background-color: #F2F2F2;
-    height: 50px;
-    width: 50px;
-    border-bottom-left-radius: 25%;
-    border-top-left-radius: 25%;
-}
-
-.maps input
-{
-    width: 200px;
-    height: 98%;
-    border: none;
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-.maps .fa-search
-{
-    background-color: #0065FC;
-    color: white;
-    height: 50px;
-    width: 50px;
-    border-radius: 25%;
-}
-
-.filtre
-{
-    background-color: blue;
-    width: fit-content;
-    border: black dotted 1px;
-    display: flex;
-}
-
-.filtre .fas
-{
-    background-color: violet;
-    color: #0065FC;
-    height: 40px;
-    width: 40px;
-}
-
-.filtre input
-{
-    height: 40px;
-    width: 150px;
-} */
-
-/* autres */
-/* aside
-{
-    background-color: #F2F2F2;
-}
-
-.popular
-{
-    background-color: yellow;
-}
-
-.bed
-{
-    background-color: white;
-    border-radius: 5%;
-    margin: 5%;
-}
-
-.rooms
-{
-    background-color: white;
-    border-radius: 5%;
-    margin: 5%;
-}
-
-.act
-{
-    background-color: white;
-    border-radius: 5%;
-    margin: 5%;
-}
-#popular img 
-{
-    max-width: 100%;
-    height: auto;
-}
-
-
-
-footer
-{
-    background-color: #F2F2F2;
-}
-
-footer ul a
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-}
-
-footer ul a:hover
-{
-    color: #0065FC; 
-} */
+    .activity_picture
+    {
+        width: 330px;
+        max-height: 125px;
+        overflow: hidden;
+    }    
