@@ -1,69 +1,75 @@
 /* éléments de la page */
-body 
-    {
+body {
         font-family: "Raleway", sans-serif;
         font-size: 1em;
         margin: 0;
         padding: 0;
         margin-top: 90px;
-    }
-img 
-    {
+}
+img {
         max-width: 100%;
         height: auto;
-    }
-a, a:visited
-    {
+}
+a, a:visited {
         text-decoration: none;
         color:black;
-    }
-a:hover
-{
+}
+a:hover {
     color: #0065FC;
 }
 ul
     {
         list-style: none;
-    }
-
+}
 
     /* HEADER COMMUN */
 
-#inscription
-    {
-        font-weight: bolder;
-        color: #0065FC;
-    }
-#inscription:hover
-    {
-        color: black;
-    }
-#navbar li:hover
-    {
-        color: #0065FC;
-    }
-
+#inscription {
+    font-weight: bolder;
+    color: #0065FC;
+}
+#inscription:hover {
+    color: black;
+}
+#navbar li:hover {
+    color: #0065FC;
+}
 
     /* HEADER VERSION MOBILE */
 
+    #logo_and_inscription {
+        background-color: blue;
+    }
 #logo_and_inscription img
     {
         position: absolute;
         top: 25px; left: 20px;
-        /* à supprimer */ background-color: white;
+        /* à supprimer */ background-color: green;
     }
 #inscription
     {
         position: absolute;
         top: 40px; right: 20px;
-        /* à supprimer */ background-color: white;
+        /* à supprimer */ background-color: blue;
     }
+
+    @media screen and (min-width: 900px) {
+        #inscription {
+            background-color: red;
+            top: 10px;
+        }
+        #navbar {
+            position: absolute;
+            top: -15px;
+            right: 100px;
+        }
+    }
+
 #navbar
     {
-        display: block;
         display:flex;
         padding: 0px;
-        /* à supprimer */ background-color: white;
+        /* à supprimer */ background-color: purple;
     }
 #navbar li
     {
@@ -284,30 +290,37 @@ aside, footer
     /* FOOTER  */
 footer {
     background-color: #F2F2F2;
-    padding: 20px 0 20px 0;
-}
-#links h2 {
-    font-size: 1em; 
+    padding: 25px 0 25px 0;
 }
 #links ul {
-    padding: 0;
-    margin: 25px;
+    padding: 0 0 15px 0;
+    max-width: 300px;
+}
+h3 {
+    font-size: 1em;
 }
 #links li {
     font-size: 0.9em;
-    line-height: 2em;
+    line-height: 1.7em;
 }
-
-@media screen and (min-width: 900px) {
-    footer {
-        padding: 25px 0 50px 0;
+    
+    /* spécificité margin pour le format mobile */
+    @media screen and (max-width: 480px) {
+        #links a, #links h3 {
+            margin: 0 0 0 25px;
+        }
     }
-    #links {
-        display: flex;
-        flex-basis: auto;
+    /* spécificité margin et display pour le format web et tablette */
+    @media screen and (min-width: 481px) {
+        #links {
+            display: flex;
+            flex-basis: auto;
+            flex-wrap: wrap; /*utile pour tous les formats inférieurs à 900px */
+        }
+        #links ul {
+            flex-grow: 1;
+        }
+        #links a, #links h3{
+            margin: 0 0 0 50px;
+        }
     }
-    #links ul {
-        margin: 0 50px 0 50px;
-        flex-grow: 1;
-    }
-}
