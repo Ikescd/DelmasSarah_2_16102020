@@ -1,176 +1,174 @@
-/* éléments de la page */
+    /* ELEMENTS DE LA PAGE */
 body {
-        font-family: "Raleway", sans-serif;
-        font-size: 1em;
-        margin: 0;
-        padding: 0;
-        margin-top: 90px;
+    font-family: "Raleway", sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
 }
-img {
-        max-width: 100%;
-        height: auto;
-}
-a, a:visited {
-        text-decoration: none;
-        color:black;
+a {
+    text-decoration: none;
+    color: black;
 }
 a:hover {
     color: #0065FC;
 }
-ul
-    {
-        list-style: none;
+li {
+    list-style: none;
 }
 
-    /* HEADER COMMUN */
-
-#inscription {
-    font-weight: bolder;
+    /* HEADER */
+#logo_and_inscription {
+    height: 75px;
+}
+.inscription {
+    font-weight: bold;
     color: #0065FC;
 }
-#inscription:hover {
+.inscription:hover {
     color: black;
 }
-#navbar li:hover {
-    color: #0065FC;
+.navbar {
+    display:flex;
+    padding: 0px; /* permet de ne pas avoir de décalage de la barre de navigation */
 }
-
-    /* HEADER VERSION MOBILE */
-
-    #logo_and_inscription {
-        background-color: blue;
-    }
-#logo_and_inscription img
-    {
-        position: absolute;
-        top: 25px; left: 20px;
-        /* à supprimer */ background-color: green;
-    }
-#inscription
-    {
-        position: absolute;
-        top: 40px; right: 20px;
-        /* à supprimer */ background-color: blue;
-    }
-
-    @media screen and (min-width: 900px) {
-        #inscription {
-            background-color: red;
-            top: 10px;
-        }
-        #navbar {
-            position: absolute;
-            top: -15px;
-            right: 100px;
-        }
-    }
-
-#navbar
-    {
-        display:flex;
-        padding: 0px;
-        /* à supprimer */ background-color: purple;
-    }
-#navbar li
-    {
-        display:inline;
-        flex: 50%;
-        text-align: center;
-        border-bottom: #F2F2F2 solid 3px;
-    }
-#navbar a
-    {
-        margin: 0;
-        outline: none;
-        display: inline-block;
-        line-height: 40px;
-        width: 170px;
-    }
-#navbar li:hover
-    {
-       border-bottom: #0065FC solid 3px;
-    }
-
-
-    /* SEARCHING TOOL */
-#searching_tool
-{
-    margin: 15px;
-}
-    h1
-{
-    font-size: 1.4em;
-}
-
-#maps
-{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    height: 40px;
-    background-color: grey;
-    overflow: hidden;
-    border: grey solid 2px;
-    border-radius: 15px;
-    flex-basis: auto;
-}
-
-#maps input
-{
-    border: none;
-    flex-grow: 1;
-}
-#maps .fa-map-marker-alt
-{
-    color: black;
-    flex-grow: 1;
-}
-
-#maps .fa-search
-{
-    color: white;
-    flex-grow: 1;
-    background-color: blue;
-}
-
-#maps .icon
-{
-    max-width: ;width: 40px;
+.navbar li {
+    display:inline;
+    flex: 50%; /* permet de répartir équitablement les menus de la barre de navigation par rapport à une surface donnée */
     text-align: center;
+    padding: 15px;
 }
+.navbar a {
+    outline: none;
+    display: inline-block; /* permet de rendre toute la zone du lien cliquable et non seulement le lien */
+    min-width: 150px;
+}
+    @media screen and (max-width: 480px) {
+        header {
+            height: 165px;
+        }
+        #logo_and_inscription img {
+            position: absolute;
+            top: 25px; left: 20px;
+        }
+        a.inscription {
+            position: absolute;
+            top: 40px; right: 20px;
+        }
+        #navbar_web {
+            display: none;
+        }
+        #navbar_mobile li {
+            border-bottom: #F2F2F2 solid 3px;
+        }
+        #navbar_mobile li:hover {
+           border-bottom: #0065FC solid 3px;
+        }
+    }
+    @media screen and (min-width: 481px) {
+        header {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+        #logo_and_inscription img {
+            position: absolute;
+            top: 30px; left: 50px;
+        }
+        .navbar {
+            width: max-content;
+            flex-basis: auto;
+            margin: 0; /* permet à la barre de navigation d'être fixée tout en haut */
+        }
+        #navbar_web li:hover {
+            border-top: #0065FC solid 3px;
+        }
+        #navbar_web li {
+            border-top: white solid 3px;
+        }
+        #logo_and_inscription a.inscription, #navbar_mobile {
+            display: none;
+        }
+    }
 
-#preferences_filter
-{
+    /* SECTION */
+h2 {
+    font-size: 1.2em;
+}
+.fas {
+    color: #0065FC;
+    font-size: 0.9em;
+}
+.star_grey {
+    color: #F2F2F2;
+}
+section a {
+    font-weight: bolder;
+}
+    @media screen and (min-width: 481px) {
+        section {
+            margin: 50px;
+        }
+    }
+    
+/* ARTICLE HEBERGEMENTS */
+#rooms_list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 15px;
 }
-.filter_list
-{
-    height: 40px;
-    border: grey solid 2px;
-    background-color: lightblue;
-    margin: 10px;
+.room {
     border-radius: 25px;
     overflow: hidden;
+    background-color: white;
+    font-size: 0.9em;
+    box-shadow: 2px 1px 10px #555;
+    border: white solid 5px;
+    height: 200px;
+    margin: 10px 0 10px 0;
 }
+.room_picture {
+    max-height: 120px;
+    overflow: hidden;
+}
+.room_description {
+    margin-left: 15px;
+    margin-top: -5px;
+    font-size: 0.9em;
+}
+.room_name {
+    font-size: 1.2em;
+}
+.room_bolder {
+    font-weight: bolder;
+}
+article {
+    padding: 25px;
+}    
+    @media screen and (max-width: 480px) {
+        .room {
+            width: 300px;
+        }
+    }
+    @media screen and (min-width: 481px) {
+        #hebergement {
+            background-color: #F2F2F2;
+            border-radius: 25px;
+        }
+        #rooms_list {
+            justify-content: center;
+            
+        }
+        .room {
+            width: 250px;
+            margin: 15px;
+        }
+    }
 
-.filter_list input
-{
-    text-align: center;
-    max-width: 150px;
-    min-width: 100px;
-    height: 40px;
-    border: none;
-}
-.filter_list i
-{
-    border-radius: 25px;
-    width: 40px;
-    height: 40px;
-}
-    /* SECTION POPULAR */
-aside, footer
+            /* A CHANGER ASAP */
+/* SECTION POPULAR */
+aside
 {
     background-color: #F2F2F2;
     margin: 0;
@@ -208,25 +206,9 @@ aside, footer
     margin-left: 20px;
     min-width: 175px;
 }
+/* SECTION ACTIVITES */
     
-    /* SECTION HEBERGEMENTS */
-
-    h2
-    {
-        font-size: 1.3em;
-    }
-    
-    h3
-    {
-        font-size: 1em;
-    }
-    
-    article
-    {
-        margin: 10px;
-    }
-    
-    .room, .activity
+.activity
     {
         margin: 10px;
         overflow: hidden;
@@ -236,56 +218,31 @@ aside, footer
         font-size: 0.9em;
         box-shadow: 2px 1px 10px #555;
     }
-
-    .room
-    {
-        border: white solid 5px;
-    }
-    
-    .room_picture, .activity_picture
+.activity_picture
     {
         width: 330px;
         max-height: 105px;
         overflow: hidden;
     }
-    
-    .room_description, .activity_description
+.activity_description
     {
         margin-left: 15px;
         margin-top: -5px;
         line-height: 1.5em;
         font-size: 0.9em;
     }
-    
-    .room_name, .activity_name
+.activity_name
     {
         font-weight: bolder;
         font-size: 1.1em;
     }
-    .room_price
-    {
-        font-weight: bolder;
-    }
-    
-    .fas
-    {
-        color: blue;
-        margin-top: 5px;
-        font-size: 0.9em;
-    }
-    .star_grey
-    {
-        color: grey;
-    }
-
-    .activity_picture
+.activity_picture
     {
         width: 330px;
         max-height: 125px;
         overflow: hidden;
     }    
-/* haut | droit | bas | gauche */
-
+            /* FIN A CHANGER */
 
     /* FOOTER  */
 footer {
@@ -293,34 +250,30 @@ footer {
     padding: 25px 0 25px 0;
 }
 #links ul {
-    padding: 0 0 15px 0;
-    max-width: 300px;
+    padding: 0; /* utilisé pour supprimer le margin auto de ul */
+}
+.links_list {
+    min-width: 250px;
 }
 h3 {
     font-size: 1em;
 }
 #links li {
     font-size: 0.9em;
-    line-height: 1.7em;
 }
-    
-    /* spécificité margin pour le format mobile */
     @media screen and (max-width: 480px) {
-        #links a, #links h3 {
-            margin: 0 0 0 25px;
+        #links {
+            padding: 25px 25px 25px 25px;
         }
     }
-    /* spécificité margin et display pour le format web et tablette */
     @media screen and (min-width: 481px) {
         #links {
             display: flex;
             flex-basis: auto;
-            flex-wrap: wrap; /*utile pour tous les formats inférieurs à 900px */
+            flex-wrap: wrap;
+            margin: 50px 50px 50px 50px;
         }
-        #links ul {
+        .links_list {
             flex-grow: 1;
-        }
-        #links a, #links h3{
-            margin: 0 0 0 50px;
         }
     }
