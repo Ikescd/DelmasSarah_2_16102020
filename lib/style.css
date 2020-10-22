@@ -43,7 +43,7 @@ li {
     display: inline-block; /* permet de rendre toute la zone du lien cliquable et non seulement le lien */
     min-width: 150px;
 }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 700px) {
         header {
             height: 165px;
         }
@@ -65,7 +65,7 @@ li {
            border-bottom: #0065FC solid 3px;
         }
     }
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 701px) {
         header {
             display: flex;
             justify-content: space-between;
@@ -91,9 +91,16 @@ li {
         }
     }
 
-    /* SECTION */
-h2 {
+    /* DIV SEARCHING_TOOL */
+#searching_tool {
+    text-align: center;
+    border: 2px dotted black;
+    margin: 0 50px 50px 50px;
+}
+    /* SECTIONS */
+h2, #popular_room_list .fas {
     font-size: 1.2em;
+    color: black;
 }
 .fas {
     color: #0065FC;
@@ -105,144 +112,140 @@ h2 {
 section a {
     font-weight: bolder;
 }
-    @media screen and (min-width: 481px) {
-        section {
-            margin: 50px;
-        }
-    }
-    
-/* ARTICLE HEBERGEMENTS */
-#rooms_list {
+
+    /* ARTICLES + ASIDE */
+#rooms_list, #activity_list {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 15px;
 }
-.room {
+.room, .activity {
+    height: 175px;
+}
+.room, .popular_room {
+    border: white solid 5px;
+}
+.room, .activity, .popular_room {
     border-radius: 25px;
     overflow: hidden;
     background-color: white;
-    font-size: 0.9em;
     box-shadow: 2px 1px 10px #555;
-    border: white solid 5px;
-    height: 200px;
-    margin: 10px 0 10px 0;
+    margin-bottom: 25px;
 }
-.room_picture {
-    max-height: 120px;
+.room_picture, .activity_picture, .popular_picture {
     overflow: hidden;
 }
-.room_description {
+.room_description, .activity_description, .popular_room_description {
+    line-height: 1.3em;
     margin-left: 15px;
-    margin-top: -5px;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
-.room_name {
+.room_name, .activity_name, .popular_name {
     font-size: 1.2em;
 }
-.room_bolder {
+.room_bolder, .activity_bolder, .popular_bolder {
     font-weight: bolder;
 }
-article {
-    padding: 25px;
-}    
-    @media screen and (max-width: 480px) {
-        .room {
-            width: 300px;
+    @media screen and (max-width: 700px) {
+        #activities, #popular, #hebergement {
+            padding: 25px;
+        }
+    .room, .activity, .popular_room {
+            min-width: 250px;
+            margin-bottom: 15px;
         }
     }
-    @media screen and (min-width: 481px) {
-        #hebergement {
+    @media screen and (min-width: 701px) {
+        #popular_and_hebergement {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0 50px 0 50px;
+        }
+        #hebergement, #popular {
             background-color: #F2F2F2;
+            padding: 25px
+        }
+        #hebergement, #activities {
             border-radius: 25px;
         }
-        #rooms_list {
-            justify-content: center;
-            
-        }
         .room {
-            width: 250px;
-            margin: 15px;
+            width: 220px;
         }
     }
-
-            /* A CHANGER ASAP */
-/* SECTION POPULAR */
-aside
-{
+    /* ARTICLE HEBERGEMENTS */
+.room_picture {
+    max-height: 110px;
+}
+    @media screen and (min-width: 701px) {
+        #hebergement {
+            width: 60%;
+        }
+    }
+    /* ARTICLE ACTIVITES */
+.activity_name {
+    padding: 15px;
+}
+.activity_picture {
+    max-height: 120px;
+}
+    @media screen and (min-width: 701px) {
+        #activities {
+            margin: 40px;
+        }
+        #activities h2 {
+            padding: 0 0 0 50px;
+        }
+        .activity {
+            width: 300px;
+            margin: 10px;
+        }
+    }
+    /* ASIDE */
+aside {
     background-color: #F2F2F2;
-    margin: 0;
-    padding: 20px 0 20px;
 }
-
-.popular_room
-    {
-        display: flex;
-        background-color : white;
-        overflow: hidden;
-        height: 125px;
-        width: auto;
-        border-radius: 20px;
-        font-size: 0.9em;
-        box-shadow: 2px 1px 10px #555;
-        border: white solid 5px;
-        margin: 10px;
-    }
-   
-.popular_room_picture
-    {
-        
-        background-color: teal;
-    }
-
-.popular_room_picture img
-{
+.popular_room {
+    display: flex;
+}
+.popular_room_picture {
+    width: 120px;
+    overflow: hidden;
+}
+.popular_room_picture img {
     min-height: 100%;
-    width: 100%;
+    min-width: 100%;
 }
-
-.popular_room_description
-{
-    margin-left: 20px;
-    min-width: 175px;
+.popular_room_description {
+    width: 175px;
+    padding: 0 0 0 15px;
 }
-/* SECTION ACTIVITES */
-    
-.activity
-    {
-        margin: 10px;
-        overflow: hidden;
-        height: 175px;
-        max-width: 330px;
-        border-radius: 20px;
-        font-size: 0.9em;
-        box-shadow: 2px 1px 10px #555;
+    @media screen and (max-width: 700px) {
+        .popular_room {
+            background-color: blue;
+            height: 150px;
+            margin: 25px 0 15px 0;
+        }
+        .popular_room_description i {
+            margin-top: 55px;
+        }
     }
-.activity_picture
-    {
-        width: 330px;
-        max-height: 105px;
-        overflow: hidden;
+    @media screen and (min-width: 701px) {
+        aside {
+            border-radius: 25px;
+            width: 30%;
+        }
+        .popular_room {
+            max-width: 350px;
+            height: 110px;
+            margin: 25px;
+        }
+        .popular_room_description i {
+            margin-top: 10px;
+        }
     }
-.activity_description
-    {
-        margin-left: 15px;
-        margin-top: -5px;
-        line-height: 1.5em;
-        font-size: 0.9em;
-    }
-.activity_name
-    {
-        font-weight: bolder;
-        font-size: 1.1em;
-    }
-.activity_picture
-    {
-        width: 330px;
-        max-height: 125px;
-        overflow: hidden;
-    }    
-            /* FIN A CHANGER */
 
     /* FOOTER  */
 footer {
@@ -261,12 +264,12 @@ h3 {
 #links li {
     font-size: 0.9em;
 }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 700px) {
         #links {
             padding: 25px 25px 25px 25px;
         }
     }
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 701px) {
         #links {
             display: flex;
             flex-basis: auto;
