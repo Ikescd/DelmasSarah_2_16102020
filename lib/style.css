@@ -3,8 +3,14 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 1em;
     margin: 0;
-    padding: 0;
     line-height: 1.5em;
+    padding: 0;
+}
+@media screen and (min-width: 701px) {
+    #bloc_page_without_footer {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
 a {
     text-decoration: none;
@@ -72,8 +78,7 @@ li {
             height: 100px;
         }
         #logo_and_inscription img {
-            position: absolute;
-            top: 30px; left: 50px;
+            margin: 25px 0 0 50px;
         }
         .navbar {
             width: max-content;
@@ -224,7 +229,6 @@ aside {
 }
     @media screen and (max-width: 700px) {
         .popular_room {
-            background-color: blue;
             height: 150px;
             margin: 25px 0 15px 0;
         }
@@ -250,7 +254,6 @@ aside {
     /* FOOTER  */
 footer {
     background-color: #F2F2F2;
-    padding: 25px 0 25px 0;
 }
 #links ul {
     padding: 0; /* utilisé pour supprimer le margin auto de ul */
@@ -270,11 +273,15 @@ h3 {
         }
     }
     @media screen and (min-width: 701px) {
+        footer {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
         #links {
             display: flex;
             flex-basis: auto;
             flex-wrap: wrap;
-            margin: 50px 50px 50px 50px;
+            padding: 50px;
         }
         .links_list {
             flex-grow: 1;

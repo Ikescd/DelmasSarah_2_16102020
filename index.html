@@ -11,217 +11,222 @@
 
 <body>
     <div id="bloc_page">
-        <header>
-            <div id="logo_and_inscription">
-                <img src="./images/logo/Reservia.svg" alt="Logo de Reservia">
-                <a href="#" class="inscription">S'inscrire</a>                  
-            </div>
-            <nav>
-                <ul id="navbar_mobile" class="navbar">
-                    <li><a href="#hebergements" class="menu_list">Hébergements</a></li>
-                    <li><a href="#activites" class="menu_list">Activités</a></li>
-                </ul>
-                <ul id="navbar_web" class="navbar">
-                    <li><a href="#hebergements" class="menu_list">Hébergements</a></li>
-                    <li><a href="#activites" class="menu_list">Activités</a></li>
-                    <li class="inscription"><a href="#" class="menu_list inscription">S'inscrire</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section>
-            <div id="searching_tool">
-                <h1><!-- penser à le sortir de la div -->
-                    <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
-                    <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i> Filtres <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
-                    <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i></h1>
-            </div>
-        </section>
-        <section id="popular_and_hebergement">
-        <!-- ASIDE POPULAIRES -->
-            <aside id="popular">
-                <div id="popular_room_list">
-                    <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2> 
-                </div> <!-- div fermante popular -->
-                <div class="popular_room">
-                    <div class="popular_room_picture">
-                        <img src="/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre de l'Hôtel Le Soleil du matin">
-                    </div> <!-- div fermante popular_room_picture -->
-                    <div class="popular_room_description">
-                        <p>
-                            <span class="popular_name popular_bolder">Hôtel Le Soleil du matin</span><br>
-                            Nuit à partir de <span class="popular_bolder">25€</span><br>
-                            <span class="popular_notation">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </span> <!-- div fermante popular_notation -->
-                        </p>
-                    </div> <!-- div fermante popular_room_description -->
-                </div> <!-- div fermante popular_room -->
-                <div class="popular_room">
-                    <div class="popular_room_picture">
-                        <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôte">
-                    </div> <!-- div fermante popular_room_picture -->
-                    <div class="popular_room_description">
-                        <p>
-                            <span class="popular_name popular_bolder">Au coeur de l'eau, Chambre d'hôtes</span><br>
-                            Nuit à partir de <span class="popular_bolder">71€</span><br>
-                            <span class="popular_notation">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </span> <!-- div fermante popular_notation -->
-                        </p>
-                    </div> <!-- div fermante popular_room_description -->
-                </div> <!-- div fermante popular_room -->
-                <div class="popular_room">
-                    <div class="popular_room_picture">
-                        <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
-                    </div> <!-- div fermante popular_room_picture -->
-                    <div class="popular_room_description">
-                        <p>
-                            <span class="popular_name popular_bolder">Hôtel Tout bleu et blanc</span><br>
-                            Nuit à partir de <span class="popular_bolder">68€</span><br>
-                            <span class="popular_notation">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </span> <!-- div fermante popular_notation -->
-                        </p>
-                    </div> <!-- div fermante popular_room_description -->
-                </div> <!-- div fermante popular_room -->
-            </aside>
-        <!-- ARTICLE HEBERGEMENTS -->
-            <article id="hebergement">
-                <h2>Hébergements à Marseille</h2>
-                    <div id="rooms_list">
-                        <div class="room">
-                            <div class="room_picture">
-                                <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre de l'Auberge de la Cannebière">
-                            </div>
-                            <div class="room_description">
-                                <p>
-                                    <span class="room_bolder room_name">Auberge de la Cannebière</span><br>
-                                    Nuit à partir de <span class="room_bolder">25€</span><br>
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                </p>
-                            </div> <!-- div fermante room_description -->
-                        </div> <!-- div fermante room -->
-                        <div class="room">
-                            <div class="room_picture">
-                                <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre de l'Hôtel du Port">
-                            </div>
-                            <div class="room_description">
-                                <p>
-                                    <span class="room_bolder room_name">Hôtel du Port</span><br> 
-                                    Nuit à partir de <span class="room_bolder">52€</span><br>        
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </p>
-                            </div> <!-- div fermante room_description -->
-                        </div> <!-- div fermante room -->
-                        <div class="room">
-                            <div class="room_picture">
-                                <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre de l'Hôtel des Mouettes">
-                            </div>
-                            <div class="room_description">
-                                <p>
-                                    <span class="room_bolder room_name">Hôtel des Mouettes</span><br> 
-                                    Nuit à partir de <span class="room_bolder">76€</span><br>
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                </p>
-                            </div> <!-- div fermante room_description -->
-                        </div> <!-- div fermante room -->
-                        <div class="room">
-                            <div class="room_picture">
-                                <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre de l'Hôtel de la mer">
-                            </div>
-                            <div class="room_description">
-                                <p>
-                                    <span class="room_bolder room_name">Hôtel de la Mer</span><br> 
-                                    Nuit à partir de <span class="room_bolder">46€</span><br>
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                </p>
-                            </div> <!-- div fermante room_description -->
-                        </div> <!-- div fermante room -->
-                        <div class="room">
-                            <div class="room_picture">
-                                <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre de l'Auberge Le Panier">
-                            </div>
-                            <div class="room_description">
-                                <p>
-                                    <span class="room_bolder room_name">Auberge Le Panier</span><br> 
-                                    Nuit à partir de <span class="room_bolder">23€</span><br>
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                </p>
-                            </div> <!-- div fermante room_description -->
-                        </div> <!-- div fermante room -->
-                        <div class="room">
-                            <div class="room_picture">
-                                <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre de l'Hôtel Chez Amina">
-                            </div>
-                            <div class="room_description">
-                                <p>
-                                    <span class="room_bolder room_name">Hôtel Chez Amina</span><br> 
-                                    Nuit à partir de <span class="room_bolder">96€</span><br>
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                </p>
-                            </div> <!-- div fermante room_description -->
-                        </div> <!-- div fermante room -->
-                    </div> <!-- div fermante rooms_list -->
-                <a href="#">Afficher plus</a>
-            </article>
-        </section>
+        <div id="bloc_page_without_footer">
+            <header>
+                <div id="logo_and_inscription">
+                    <img src="./images/logo/Reservia.svg" alt="Logo de Reservia">
+                    <a href="#" class="inscription">S'inscrire</a>                  
+                </div>
+                <nav>
+                    <ul id="navbar_mobile" class="navbar">
+                        <li><a href="#hebergement" class="menu_list">Hébergements</a></li>
+                        <li><a href="#activities" class="menu_list">Activités</a></li>
+                    </ul>
+                    <ul id="navbar_web" class="navbar">
+                        <li><a href="#hebergement" class="menu_list">Hébergements</a></li>
+                        <li><a href="#activites" class="menu_list">Activités</a></li>
+                        <li class="inscription"><a href="#" class="menu_list inscription">S'inscrire</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-        <section>
-        <!-- ARTICLE ACTIVITES -->
-            <article id="activities">
-                <h2>Activités à Marseille</h2>
-                    <div id="activity_list">
-                        <div class="activity activity_one">
-                            <div class="activity_picture">
-                                <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite du Vieux Port">
-                            </div > <!-- div fermante activity_picture -->
+            <section>
+                <div id="searching_tool">
+                    <h1><!-- penser à le sortir de la div -->
+                        <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
+                        <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i> Filtres <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
+                        <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i></h1>
+                </div>
+            </section>
+
+            <section id="popular_and_hebergement">
+            <!-- ASIDE POPULAIRES -->
+                <aside id="popular">
+                    <div id="popular_room_list">
+                        <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2> 
+                    </div> <!-- div fermante popular -->
+                    <div class="popular_room">
+                        <div class="popular_room_picture">
+                            <img src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre de l'Hôtel Le Soleil du matin">
+                        </div> <!-- div fermante popular_room_picture -->
+                        <div class="popular_room_description">
                             <p>
-                                <span class="activity_name  activity_bolder">Vieux Port</span>
+                                <span class="popular_name popular_bolder">Hôtel Le Soleil du matin</span><br>
+                                Nuit à partir de <span class="popular_bolder">25€</span><br>
+                                <span class="popular_notation">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </span> <!-- div fermante popular_notation -->
                             </p>
-                        </div> <!-- div fermante activity -->
-                        <div class="activity activity_two">
-                            <div class="activity_picture">
-                                <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Visite du Fort de Pomègues">
-                            </div> <!-- div fermante activity_picture -->
+                        </div> <!-- div fermante popular_room_description -->
+                    </div> <!-- div fermante popular_room -->
+                    <div class="popular_room">
+                        <div class="popular_room_picture">
+                            <img src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôte">
+                        </div> <!-- div fermante popular_room_picture -->
+                        <div class="popular_room_description">
                             <p>
-                                <span class="activity_name  activity_bolder">Fort de Pomègues</span>
+                                <span class="popular_name popular_bolder">Au coeur de l'eau, Chambre d'hôtes</span><br>
+                                Nuit à partir de <span class="popular_bolder">71€</span><br>
+                                <span class="popular_notation">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </span> <!-- div fermante popular_notation -->
                             </p>
-                        </div> <!-- div fermante activity -->
-                        <div class="activity activity_three">
-                            <div class="activity_picture">
-                                <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite de l'Île du Frioul">
-                            </div> <!-- div fermante activity_picture -->
+                        </div> <!-- div fermante popular_room_description -->
+                    </div> <!-- div fermante popular_room -->
+                    <div class="popular_room">
+                        <div class="popular_room_picture">
+                            <img src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
+                        </div> <!-- div fermante popular_room_picture -->
+                        <div class="popular_room_description">
                             <p>
-                                <span class="activity_name  activity_bolder">Île du Frioul</span>
+                                <span class="popular_name popular_bolder">Hôtel Tout bleu et blanc</span><br>
+                                Nuit à partir de <span class="popular_bolder">68€</span><br>
+                                <span class="popular_notation">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </span> <!-- div fermante popular_notation -->
                             </p>
-                        </div> <!-- div fermante activity -->
-                        <div class="activity activity_four">
-                            <div class="activity_picture">
-                                <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Visite du Vieux Port">
-                            </div> <!-- div fermante activity_picture -->
-                            <p>
-                                <span class="activity_name  activity_bolder">Parc National des Calanques</span>
-                            </p>
-                        </div> <!-- div fermante activity -->
-                        <div class="activity activity_five">
-                            <div class="activity_picture">
-                                <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Visite de Notre-Dame-de-la-Garde"> 
-                            </div> <!-- div fermante activity_picture -->
-                            <p>
-                                <span class="activity_name  activity_bolder">Notre-Dame-de-la-Garde</span>
-                            </p>
-                        </div> <!-- div fermante activity -->
-                        <div class="activity activity_five">
-                            <div class="activity_picture">
-                                <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Visite du Parc Longchamp">
-                            </div> <!-- div fermante activity_picture -->
-                            <p>
-                                <span class="activity_name  activity_bolder">Parc Longchamp</span>
-                            </p>
-                        </div> <!-- div fermante activity -->
-                    </div> <!-- div fermante activity_list -->
-            </article>   
-        </section>
+                        </div> <!-- div fermante popular_room_description -->
+                    </div> <!-- div fermante popular_room -->
+                </aside>
+            <!-- ARTICLE HEBERGEMENTS -->
+                <article id="hebergement">
+                    <h2>Hébergements à Marseille</h2>
+                        <div id="rooms_list">
+                            <div class="room">
+                                <div class="room_picture">
+                                    <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre de l'Auberge de la Cannebière">
+                                </div>
+                                <div class="room_description">
+                                    <p>
+                                        <span class="room_bolder room_name">Auberge de la Cannebière</span><br>
+                                        Nuit à partir de <span class="room_bolder">25€</span><br>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                                    </p>
+                                </div> <!-- div fermante room_description -->
+                            </div> <!-- div fermante room -->
+                            <div class="room">
+                                <div class="room_picture">
+                                    <img src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre de l'Hôtel du Port">
+                                </div>
+                                <div class="room_description">
+                                    <p>
+                                        <span class="room_bolder room_name">Hôtel du Port</span><br> 
+                                        Nuit à partir de <span class="room_bolder">52€</span><br>        
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </p>
+                                </div> <!-- div fermante room_description -->
+                            </div> <!-- div fermante room -->
+                            <div class="room">
+                                <div class="room_picture">
+                                    <img src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre de l'Hôtel des Mouettes">
+                                </div>
+                                <div class="room_description">
+                                    <p>
+                                        <span class="room_bolder room_name">Hôtel des Mouettes</span><br> 
+                                        Nuit à partir de <span class="room_bolder">76€</span><br>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                                    </p>
+                                </div> <!-- div fermante room_description -->
+                            </div> <!-- div fermante room -->
+                            <div class="room">
+                                <div class="room_picture">
+                                    <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre de l'Hôtel de la mer">
+                                </div>
+                                <div class="room_description">
+                                    <p>
+                                        <span class="room_bolder room_name">Hôtel de la Mer</span><br> 
+                                        Nuit à partir de <span class="room_bolder">46€</span><br>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                                    </p>
+                                </div> <!-- div fermante room_description -->
+                            </div> <!-- div fermante room -->
+                            <div class="room">
+                                <div class="room_picture">
+                                    <img src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre de l'Auberge Le Panier">
+                                </div>
+                                <div class="room_description">
+                                    <p>
+                                        <span class="room_bolder room_name">Auberge Le Panier</span><br> 
+                                        Nuit à partir de <span class="room_bolder">23€</span><br>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                                    </p>
+                                </div> <!-- div fermante room_description -->
+                            </div> <!-- div fermante room -->
+                            <div class="room">
+                                <div class="room_picture">
+                                    <img src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre de l'Hôtel Chez Amina">
+                                </div>
+                                <div class="room_description">
+                                    <p>
+                                        <span class="room_bolder room_name">Hôtel Chez Amina</span><br> 
+                                        Nuit à partir de <span class="room_bolder">96€</span><br>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                                    </p>
+                                </div> <!-- div fermante room_description -->
+                            </div> <!-- div fermante room -->
+                        </div> <!-- div fermante rooms_list -->
+                    <a href="#">Afficher plus</a>
+                </article>
+            </section>
+
+            <section>
+            <!-- ARTICLE ACTIVITES -->
+                <article id="activities">
+                    <h2>Activités à Marseille</h2>
+                        <div id="activity_list">
+                            <div class="activity activity_one">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite du Vieux Port">
+                                </div > <!-- div fermante activity_picture -->
+                                <p>
+                                    <span class="activity_name  activity_bolder">Vieux Port</span>
+                                </p>
+                            </div> <!-- div fermante activity -->
+                            <div class="activity activity_two">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Visite du Fort de Pomègues">
+                                </div> <!-- div fermante activity_picture -->
+                                <p>
+                                    <span class="activity_name  activity_bolder">Fort de Pomègues</span>
+                                </p>
+                            </div> <!-- div fermante activity -->
+                            <div class="activity activity_three">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite de l'Île du Frioul">
+                                </div> <!-- div fermante activity_picture -->
+                                <p>
+                                    <span class="activity_name  activity_bolder">Île du Frioul</span>
+                                </p>
+                            </div> <!-- div fermante activity -->
+                            <div class="activity activity_four">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Visite du Vieux Port">
+                                </div> <!-- div fermante activity_picture -->
+                                <p>
+                                    <span class="activity_name  activity_bolder">Parc National des Calanques</span>
+                                </p>
+                            </div> <!-- div fermante activity -->
+                            <div class="activity activity_five">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Visite de Notre-Dame-de-la-Garde"> 
+                                </div> <!-- div fermante activity_picture -->
+                                <p>
+                                    <span class="activity_name  activity_bolder">Notre-Dame-de-la-Garde</span>
+                                </p>
+                            </div> <!-- div fermante activity -->
+                            <div class="activity activity_five">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Visite du Parc Longchamp">
+                                </div> <!-- div fermante activity_picture -->
+                                <p>
+                                    <span class="activity_name  activity_bolder">Parc Longchamp</span>
+                                </p>
+                            </div> <!-- div fermante activity -->
+                        </div> <!-- div fermante activity_list -->
+                </article>   
+            </section>
+        </div> 
+
 
         <footer>
             <div id="links">
