@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- dans le head, mettre en place tout le contenu qui se fera sur l'ensemble de la page web : css, font, etc. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,44 +28,64 @@
                 </ul>
             </nav>
         </header>
-
-        <div id="searching_tool">
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p> 
-            
-            <div id="maps">
-                <i class="icon fas fa-map-marker-alt"></i>
-                <input type="text" value="Marseille, France">
-                <i class="icon fas fa-search"></i>
-            </div>
-            
-            <div id="search_filter">
-                            <h2>Filtres</h2>
-                
-                <div id="preferences_filter">
-                    <div class="filter_list">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <input type="text" value="économique">
-                    </div>
-                    <div class="filter_list">
-                        <i class="fas fa-child"></i>
-                        <input type="text" value="familial">
-                    </div>
-                    <div class="filter_list">
-                        <i class="fas fa-heart"></i>
-                        <input type="text" value="romantique">
-                    </div>
-                    <div class="filter_list">
-                        <i class="fas fa-dog"></i>
-                        <input type="text" value="animaux autorisés">
-                    </div>
-                </div>
-                
-                <i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville
-            </div>
-        </div>
-        
         <section>
+            <div id="searching_tool">
+                <h1><!-- penser à le sortir de la div -->
+                    <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
+                    <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i> Filtres <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
+                    <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i></h1>
+            </div>
+        </section>
+        <section id="popular_and_hebergement">
+        <!-- ASIDE POPULAIRES -->
+            <aside id="popular">
+                <div id="popular_room_list">
+                    <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2> 
+                </div> <!-- div fermante popular -->
+                <div class="popular_room">
+                    <div class="popular_room_picture">
+                        <img src="/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre de l'Hôtel Le Soleil du matin">
+                    </div> <!-- div fermante popular_room_picture -->
+                    <div class="popular_room_description">
+                        <p>
+                            <span class="popular_name popular_bolder">Hôtel Le Soleil du matin</span><br>
+                            Nuit à partir de <span class="popular_bolder">25€</span><br>
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- div fermante popular_notation -->
+                        </p>
+                    </div> <!-- div fermante popular_room_description -->
+                </div> <!-- div fermante popular_room -->
+                <div class="popular_room">
+                    <div class="popular_room_picture">
+                        <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôte">
+                    </div> <!-- div fermante popular_room_picture -->
+                    <div class="popular_room_description">
+                        <p>
+                            <span class="popular_name popular_bolder">Au coeur de l'eau, Chambre d'hôtes</span><br>
+                            Nuit à partir de <span class="popular_bolder">71€</span><br>
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- div fermante popular_notation -->
+                        </p>
+                    </div> <!-- div fermante popular_room_description -->
+                </div> <!-- div fermante popular_room -->
+                <div class="popular_room">
+                    <div class="popular_room_picture">
+                        <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
+                    </div> <!-- div fermante popular_room_picture -->
+                    <div class="popular_room_description">
+                        <p>
+                            <span class="popular_name popular_bolder">Hôtel Tout bleu et blanc</span><br>
+                            Nuit à partir de <span class="popular_bolder">68€</span><br>
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- div fermante popular_notation -->
+                        </p>
+                    </div> <!-- div fermante popular_room_description -->
+                </div> <!-- div fermante popular_room -->
+            </aside>
+        <!-- ARTICLE HEBERGEMENTS -->
             <article id="hebergement">
                 <h2>Hébergements à Marseille</h2>
                     <div id="rooms_list">
@@ -146,115 +164,65 @@
                     </div> <!-- div fermante rooms_list -->
                 <a href="#">Afficher plus</a>
             </article>
-
-            <article id="activites">
-                    <h2>Activités à Marseille</h2>
-                    
-                    <div class="activity">
-                        <div class="activity_picture">
-                            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite du Vieux Port">
-                        </div>
-                        <p>
-                            <span class="activity_name activity_description">Vieux Port</span>
-                        </p>
-                    </div>
-
-                    <div class="activity">
-                        <div class="activity_picture">
-                            <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Visite du Fort de Pomègues">
-                        </div>
-                        <p>
-                            <span class="activity_name activity_description">Fort de Pomègues</span>
-                        </p>
-                    </div>
-
-                    <div class="activity">
-                        <div class="activity_picture">
-                            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite de l'Île du Frioul">
-                        </div>
-                        <p>
-                            <span class="activity_name activity_description">Île du Frioul</span>
-                        </p>
-                    </div>
-
-                    <div class="activity">
-                        <div class="activity_picture">
-                            <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Visite du Vieux Port">
-                        </div>
-                        <p>
-                            <span class="activity_name activity_description">Parc National des Calanques</span>
-                        </p>
-                    </div>
-
-                    <div class="activity">
-                        <div class="activity_picture">
-                            <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Visite de Notre-Dame-de-la-Garde">
-                        </div>
-                        <p>
-                            <span class="activity_name activity_description">Notre-Dame-de-la-Garde</span>
-                        </p>
-                    </div>
-
-                    <div class="activity">
-                        <div class="activity_picture">
-                            <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Visite du Parc Longchamp">
-                        </div>
-                        <p>
-                            <span class="activity_name activity_description">Parc Longchamp</span>
-                        </p>
-                    </div>
-            </article>
-
-            <aside id="popular">
-                <h2>Les plus populaires</h2><i class="fas fa-chart-line"></i>
-
-                <div class="popular_room">
-                    <div class="popular_room_picture">
-                        <img src="/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre de l'Hôtel Le Soleil du matin">
-                    </div>
-
-                    <div class="popular_room_description">
-                        <p>
-                            <span class="room_name">Hôtel Le Soleil du matin</span><br>
-                            Nuit à partir de <span class="room_price">25€</span><br>
-                            <div class="popular_notation">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="popular_room">
-                    <div class="popular_room_picture">
-                        <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôte">
-                    </div>
-
-                    <div class="popular_room_description">
-                        <p>
-                            <span class="room_name">Au coeur de l'eau, Chambre d'hôtes</span><br>
-                            Nuit à partir de <span class="room_price">71€</span><br>
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </p>
-                    </div>
-                </div>
-            
-                <div class="popular_room">
-                    <div class="popular_room_picture">
-                        <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
-                    </div>
-
-                    <div class="popular_room_description">
-                        <p>
-                            <span class="room_name">Hôtel Tout bleu et blanc</span><br>
-                            Nuit à partir de <span class="room_price">68€</span><br>
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </p>
-                    </div>
-                </div>
-            </aside>
-
         </section>
-    
+
+        <section>
+        <!-- ARTICLE ACTIVITES -->
+            <article id="activities">
+                <h2>Activités à Marseille</h2>
+                    <div id="activity_list">
+                        <div class="activity activity_one">
+                            <div class="activity_picture">
+                                <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite du Vieux Port">
+                            </div > <!-- div fermante activity_picture -->
+                            <p>
+                                <span class="activity_name  activity_bolder">Vieux Port</span>
+                            </p>
+                        </div> <!-- div fermante activity -->
+                        <div class="activity activity_two">
+                            <div class="activity_picture">
+                                <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Visite du Fort de Pomègues">
+                            </div> <!-- div fermante activity_picture -->
+                            <p>
+                                <span class="activity_name  activity_bolder">Fort de Pomègues</span>
+                            </p>
+                        </div> <!-- div fermante activity -->
+                        <div class="activity activity_three">
+                            <div class="activity_picture">
+                                <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite de l'Île du Frioul">
+                            </div> <!-- div fermante activity_picture -->
+                            <p>
+                                <span class="activity_name  activity_bolder">Île du Frioul</span>
+                            </p>
+                        </div> <!-- div fermante activity -->
+                        <div class="activity activity_four">
+                            <div class="activity_picture">
+                                <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Visite du Vieux Port">
+                            </div> <!-- div fermante activity_picture -->
+                            <p>
+                                <span class="activity_name  activity_bolder">Parc National des Calanques</span>
+                            </p>
+                        </div> <!-- div fermante activity -->
+                        <div class="activity activity_five">
+                            <div class="activity_picture">
+                                <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Visite de Notre-Dame-de-la-Garde"> 
+                            </div> <!-- div fermante activity_picture -->
+                            <p>
+                                <span class="activity_name  activity_bolder">Notre-Dame-de-la-Garde</span>
+                            </p>
+                        </div> <!-- div fermante activity -->
+                        <div class="activity activity_five">
+                            <div class="activity_picture">
+                                <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Visite du Parc Longchamp">
+                            </div> <!-- div fermante activity_picture -->
+                            <p>
+                                <span class="activity_name  activity_bolder">Parc Longchamp</span>
+                            </p>
+                        </div> <!-- div fermante activity -->
+                    </div> <!-- div fermante activity_list -->
+            </article>   
+        </section>
+
         <footer>
             <div id="links">
                 <div class="links_list">
