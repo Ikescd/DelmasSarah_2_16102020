@@ -11,32 +11,34 @@
 
 <body>
     <div id="bloc_page">
-        <div id="bloc_page_without_footer">
-            <header>
-                <div id="logo_and_inscription">
-                    <img src="./images/logo/Reservia.svg" alt="Logo de Reservia">
-                    <a href="#" class="inscription">S'inscrire</a>                  
-                </div>
-                <nav>
-                    <ul id="navbar_mobile" class="navbar">
-                        <li><a href="#hebergement" class="menu_list">Hébergements</a></li>
-                        <li><a href="#activities" class="menu_list">Activités</a></li>
-                    </ul>
-                    <ul id="navbar_web" class="navbar">
-                        <li><a href="#hebergement" class="menu_list">Hébergements</a></li>
-                        <li><a href="#activites" class="menu_list">Activités</a></li>
-                        <li class="inscription"><a href="#" class="menu_list inscription">S'inscrire</a></li>
-                    </ul>
-                </nav>
-            </header>
 
-            <section>
-                <div id="searching_tool">
-                    <h1><!-- penser à le sortir de la div -->
-                        <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
-                        <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i> Filtres <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><br>
-                        <i class="fas fa-hammer"></i><i class="fas fa-hammer"></i><i class="fas fa-hammer"></i></h1>
-                </div>
+        <header>
+            <img src="./images/logo/Reservia.svg" alt="Logo de Reservia" id="logo">
+
+            <nav id="navbar">
+                <a href="#hebergement" class="menu_list complete_list">Hébergements</a>
+                <a href="#activites" class="menu_list complete_list">Activités</a>
+                <a href="#" id="inscription" class="complete_list">S'inscrire</a>
+            </nav>
+        </header>
+
+            <section id="searching_tool">
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre-ville ou en pleine nature</p>
+                    <p>
+                        <form action="city_search" id="maps">
+                            <i class="fas fa-map-marker-alt fa-lg searching_tool_icon" size: 2x></i>
+                            <input type="text" name="city" value="Marseille, France" id="input_city"><br>
+                            <input type="submit" name="city_search" value="Rechercher" id="input_search">
+                          </form>
+                    </p>
+                   
+                    <h2>Filtres</h2>
+                    iconbillet Économique
+                    iconfamilial Familial
+                    iconheart Romantique
+                    icondog Animaux autorisés
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </section>
 
             <section id="popular_and_hebergement">
@@ -89,7 +91,7 @@
                     </div> <!-- div fermante popular_room -->
                 </aside>
             <!-- ARTICLE HEBERGEMENTS -->
-                <article id="hebergement">
+                <article id="hebergements">
                     <h2>Hébergements à Marseille</h2>
                         <div id="rooms_list">
                             <div class="room">
@@ -225,8 +227,8 @@
                         </div> <!-- div fermante activity_list -->
                 </article>   
             </section>
-        </div> 
-
+            
+    </div> <!-- div fermante de bloc_page -->
 
         <footer>
             <div id="links">
@@ -254,6 +256,5 @@
                 </div>
             </div>    
         </footer>
-    </div> <!-- div fermante de bloc_page -->
 </body>
 </html>

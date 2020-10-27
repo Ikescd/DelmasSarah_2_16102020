@@ -1,17 +1,28 @@
-    /* ELEMENTS DE LA PAGE */
-body {
-    font-family: "Raleway", sans-serif;
-    font-size: 1em;
+* {
     margin: 0;
-    line-height: 1.5em;
     padding: 0;
 }
-@media screen and (min-width: 701px) {
-    #bloc_page_without_footer {
-        margin-left: 15%;
-        margin-right: 15%;
-    }
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
 }
+
+.fa, .fas, .far {
+    font-family: "Font Awesome 5 Free";
+}
+
+section, footer {
+    background-color: green;
+}
+
+
+#bloc_page {
+    max-width: 1440px;
+    margin: auto;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -19,95 +30,157 @@ a {
 a:hover {
     color: #0065FC;
 }
+
 li {
     list-style: none;
 }
 
-    /* HEADER */
-#logo_and_inscription {
-    height: 75px;
+h1 {
+    font-size: 1.5em;
 }
-.inscription {
-    font-weight: bold;
-    color: #0065FC;
+
+h2 {
+    font-size: 1.2em;
 }
-.inscription:hover {
-    color: black;
+
+p {
+    margin: 10px 0 10px 0;
 }
-.navbar {
-    display:flex;
-    padding: 0px; /* permet de ne pas avoir de décalage de la barre de navigation */
+
+
+
+
+    /* HEADER  */
+header {
+    height: 130px;
 }
-.navbar li {
-    display:inline;
-    flex: 50%; /* permet de répartir équitablement les menus de la barre de navigation par rapport à une surface donnée */
-    text-align: center;
-    padding: 15px;
+header img {
+    min-height: 45px;
 }
-.navbar a {
-    outline: none;
-    display: inline-block; /* permet de rendre toute la zone du lien cliquable et non seulement le lien */
-    min-width: 150px;
+
+#logo {
+    margin: 25px 0 0 20px;
 }
-    @media screen and (max-width: 700px) {
+
+    @media screen and (min-width: 900px) {
         header {
-            height: 165px;
-        }
-        #logo_and_inscription img {
-            position: absolute;
-            top: 25px; left: 20px;
-        }
-        a.inscription {
-            position: absolute;
-            top: 40px; right: 20px;
-        }
-        #navbar_web {
-            display: none;
-        }
-        #navbar_mobile li {
-            border-bottom: #F2F2F2 solid 3px;
-        }
-        #navbar_mobile li:hover {
-           border-bottom: #0065FC solid 3px;
-        }
-    }
-    @media screen and (min-width: 701px) {
-        header {
+            height: 120px;
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
-            height: 100px;
         }
-        #logo_and_inscription img {
-            margin: 25px 0 0 50px;
-        }
-        .navbar {
-            width: max-content;
-            flex-basis: auto;
-            margin: 0; /* permet à la barre de navigation d'être fixée tout en haut */
-        }
-        #navbar_web li:hover {
-            border-top: #0065FC solid 3px;
-        }
-        #navbar_web li {
-            border-top: white solid 3px;
-        }
-        #logo_and_inscription a.inscription, #navbar_mobile {
-            display: none;
+        #logo {
+            margin: 5px 0 0 55px
         }
     }
 
-    /* DIV SEARCHING_TOOL */
-#searching_tool {
-    text-align: center;
-    border: 2px dotted black;
-    margin: 0 50px 50px 50px;
+
+    /* NAVBAR */
+#inscription {
+    font-weight: bold;
+    color: #0065FC;
 }
-    /* SECTIONS */
+
+#inscription:hover {
+    color: black;
+}
+
+#navbar {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_list, .complete_list {
+    flex: 1;
+    text-align: center;
+}
+
+    @media screen and (max-width: 899px) {
+        #inscription {
+            position: absolute;
+            top: 40px;
+            right: 15px;
+        }
+        .menu_list {
+            padding: 15px 0 15px 0;
+            border-bottom: #F2F2F2 solid 3px;
+        }
+        .menu_list:hover {
+            border-bottom: #0065FC solid 3px;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        #navbar {
+            width: 450px;
+            height: 120px;
+            margin: 0 35px 0 0;
+        }
+        #navbar a {
+            border-radius: 0 0 25px 25px;
+        }
+
+        #inscription:hover {
+            background-color: #DEEBFF;
+        }
+
+        .complete_list {
+            padding: 45px 0 45px 0;
+            border-top: white solid 3px;
+        }
+        .complete_list:hover {
+            border-top: #0065FC solid 3px;
+        }
+    }
+
+
+
+/* DIV SEARCHING TOOL */
+
+#searching_tool {
+    padding: 30px 25px 30px 25px;
+}
+
+#maps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    width: 330px;
+    height: 50px;
+    border: purple 2px solid;
+    border-radius: 15px;
+}
+
+.searching_tool_icon {
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px #F2F2F2 solid;
+}
+
+#searching_tool_icon, #input_search {
+    height: 50px;
+}
+#input_city {
+    border: none;
+}
+
+#input_search {
+    border-radius: 0 15px 15px 0;
+    background-color: #0065FC;
+    color: white;
+}
+
+
+
+/* SECTIONS */
 h2, #popular_room_list .fas {
     font-size: 1.2em;
     color: black;
 }
-.fas {
+#popular .fas {
     color: #0065FC;
     font-size: 0.9em;
 }
