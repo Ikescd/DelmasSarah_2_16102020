@@ -17,7 +17,7 @@
             <img src="./images/logo/Reservia.svg" alt="Logo de Reservia" id="logo">
 
             <nav id="navbar"> <!-- contains "hébergements", "activités" and "s'inscrire" -->
-                <a href="#hebergement" class="menu_list complete_list">Hébergements</a>
+                <a href="#hosting" class="menu_list complete_list">Hébergements</a>
                 <a href="#activites" class="menu_list complete_list">Activités</a>
                 <a href="#" id="inscription" class="complete_list">S'inscrire</a>
                 <!-- use a simple <a href> instead of <nav> bc easier to manage -->
@@ -290,88 +290,110 @@
 
         <section>
             <!-- ARTICLE ACTIVITES -->
-                <article id="activities">
-                    <h2>Activités à Marseille</h2>
-                        <div id="activity_list">
-                            <div class="activity activity_one">
-                                <div class="activity_picture">
-                                    <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite du Vieux Port">
-                                </div > <!-- div fermante activity_picture -->
-                                <p>
-                                    <span class="activity_name  activity_bolder">Vieux Port</span>
-                                </p>
-                            </div> <!-- div fermante activity -->
-                            <div class="activity activity_two">
+            <article id="activities">
+                <h2>Activités à Marseille</h2>
+                    <div id="activity_list">
+                        
+                        <div  id="activity1" class="activity">
+                            <div class="activity_picture">
+                                <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite du Vieux Port">
+                            </div> <!-- activity_picture closin' div -->
+                            
+                            <div class="activity_description">
+                                <h3>Vieux Port</h3>
+                            </div> <!-- activity_description closin' div -->
+                        </div> <!-- activity closin' div-->
+
+                        <div class="activity_merge">
+                            <div class="activity" id="activity2">
                                 <div class="activity_picture">
                                     <img src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Visite du Fort de Pomègues">
-                                </div> <!-- div fermante activity_picture -->
-                                <p>
-                                    <span class="activity_name  activity_bolder">Fort de Pomègues</span>
-                                </p>
-                            </div> <!-- div fermante activity -->
-                            <div class="activity activity_three">
+                                </div> <!-- activity_picture closin' div -->
+                                
+                                <div class="activity_description">
+                                    <h3>Fort de Pomègues</h3>
+                                </div> <!-- activity_description closin' div -->
+                            </div> <!-- activity closin' div-->
+                            
+
+                            <div class="activity" id="activity3">
                                 <div class="activity_picture">
                                     <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Visite de l'Île du Frioul">
-                                </div> <!-- div fermante activity_picture -->
-                                <p>
-                                    <span class="activity_name  activity_bolder">Île du Frioul</span>
-                                </p>
-                            </div> <!-- div fermante activity -->
-                            <div class="activity activity_four">
-                                <div class="activity_picture">
-                                    <img src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Visite du Vieux Port">
-                                </div> <!-- div fermante activity_picture -->
-                                <p>
-                                    <span class="activity_name  activity_bolder">Parc National des Calanques</span>
-                                </p>
-                            </div> <!-- div fermante activity -->
-                            <div class="activity activity_five">
+                                </div> <!-- activity_picture closin' div -->
+                            
+                                <div class="activity_description">
+                                    <h3>Île du Frioul</h3>
+                                </div> <!-- activity_description closin' div -->
+                            </div> <!-- activity closin' div-->
+                        </div>
+
+                        <div class="activity" id="activity4">
+                            <div class="activity_picture">
+                                <img src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Visite du Vieux Port">
+                            </div> <!-- activity_picture closin' div -->
+                        
+                            <div class="activity_description">
+                                <h3>Parc National des Calanques</h3>
+                            </div> <!-- activity_description closin' div -->
+                        </div> <!-- activity closin' div-->
+                            
+                        <div class="activity_merge">
+                            <div class="activity " id="activity5">
                                 <div class="activity_picture">
                                     <img src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Visite de Notre-Dame-de-la-Garde"> 
-                                </div> <!-- div fermante activity_picture -->
-                                <p>
-                                    <span class="activity_name  activity_bolder">Notre-Dame-de-la-Garde</span>
-                                </p>
-                            </div> <!-- div fermante activity -->
-                            <div class="activity activity_five">
+                                </div> <!-- activity_picture closin' div -->
+                                
+                                <div class="activity_description">
+                                    <h3>Notre-Dame-de-la-Garde</h3>
+                                </div> <!-- activity_description closin' div -->
+                            </div> <!-- activity closin' div-->
+
+                            <div class="activity " id="activity6">
                                 <div class="activity_picture">
                                     <img src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Visite du Parc Longchamp">
-                                </div> <!-- div fermante activity_picture -->
-                                <p>
-                                    <span class="activity_name  activity_bolder">Parc Longchamp</span>
-                                </p>
-                            </div> <!-- div fermante activity -->
-                        </div> <!-- div fermante activity_list -->
+                                </div> <!-- activity_picture closin' div -->
+                                
+                                <div class="activity_description">
+                                    <h3>Parc Longchamp</h3>
+                                </div> <!-- activity_description closin' div -->
+                            </div> <!-- activity closin' div-->
+                        </div>
+                        
+                        
+
+                    </div> <!-- div fermante activity_list -->
                 </article>   
         </section>
             
     </div> <!-- div fermante de bloc_page -->
 
-        <footer>
-            <div id="links">
-                <div class="links_list">
-                    <h3>A propos</h3>
-                    <ul>
-                        <li><a href="#">Fonctionnement du site</a></li>
-                        <li><a href="#">Conditions générales de vente</a></li>
-                        <li><a href="#">Données et confidentialité</a></li>
-                    </ul>
-                </div>
-                <div class="links_list">
-                    <h3>Nos hébergements</h3>
-                    <ul>
-                        <li><a href="#">Charte de qualité</a></li>
-                        <li><a href="#">Soumettre votre hôtel</a></li>
-                    </ul>
-                </div>
-                <div class="links_list">
-                    <h3>Assistance</h3>
-                    <ul>
-                        <li><a href="#">Centre d'aide</a></li>
-                        <li><a href="#">Nous contacter</a></li>
-                    </ul>
-                </div>
-            </div>    
-        </footer>
+    <footer>
+        <div id="links">
+            <div class="links_list">
+                <h3>À propos</h3>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+            </div>
+
+            <div class="links_list">
+                <h3>Nos hébergements</h3>
+                <ul>
+                    <li><a href="#">Charte de qualité</a></li>
+                    <li><a href="#">Soumettre votre hôtel</a></li>
+                </ul>
+            </div>
+
+            <div class="links_list">
+                <h3>Assistance</h3>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
+        </div>    
+    </footer>
 </body>
 </html>

@@ -306,10 +306,6 @@ header img {
     margin-right: 5px;
 }
 
-#activities {
-    display: none;
-}
-
 
     /* SECTION HOSTING + ACTIVITES + ASIDE */
 
@@ -319,7 +315,7 @@ header img {
 }
 
 aside, #hosting {
-    padding: 35px 20px 0px 20px;
+    padding: 20px 20px 20px 20px;
     width: fit-content;
 }
 
@@ -344,7 +340,7 @@ aside, #hosting {
     color: var(--four_color, #D9D9D9);
 }
 
-.room_picture img, .popular_room_picture img {
+.room_picture img, .popular_room_picture img, .activity_picture img {
     object-fit: cover;
 }
 
@@ -354,6 +350,8 @@ aside, #hosting {
     overflow: hidden;
     margin: 10px 0 10px 0;
     padding: 0;
+}
+.popular_room, .room, .activity {
     box-shadow: 1px 1px 12px var(--four_color, #D9D9D9);
     background-color: var(--white_color, white);
 }
@@ -367,7 +365,7 @@ aside, #hosting {
     font-size: 0.85em;
 }
 
-.popular_room:hover, .room:hover {
+.popular_room:hover, .room:hover, .activity:hover {
     box-shadow: 1px 1px 12px #555;
     cursor: zoom-in;
 }
@@ -400,6 +398,7 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
 }
 
 #popular_room_list i {
@@ -422,12 +421,9 @@ aside {
 
 
     /* ARTICLE HOSTING : */
-
-#rooms_list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+#hosting h2, #hosting a {
+    margin: 0 0 10px 10px;
+    font-weight: bold;
 }
 
 .room {
@@ -454,43 +450,121 @@ aside {
                 max-width: 880px;
             }
 
+            #rooms_list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: 5px 25px 5px 25px;
+            }            
+
+            #hosting h2, #hosting a {
+                margin: 0 0 15px 25px;
+            }
+
             .room {
                 width: 235px;
             }
         }
 
 
+    /* ARTICLE ACTIVITIES */
+
+#activities {
+    margin: 10px 20px 10px 20px;
+}
+
+#activity_list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.activity {
+    max-width: 335px;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 10px 0 10px 0;
+}
+
+.activity_picture img {
+    width: 100%;
+    height: 135px;
+}
+
+.activity_description h3 {
+    margin: 10px 0 0 15px;
+}
+    @media screen and (min-width: 900px) {
+        #activities {
+            margin: 10px 50px 10px 50px;
+        }
+
+        .activity {
+            width: 300px;
+            overflow: hidden;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .activity_merge {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        
+        #activity2, #activity3, #activity5, #activity6 {
+            height: 210px;
+        }
+
+        #activity2 img, #activity3 img, #activity5 img, #activity6 img {
+            height: 160px;
+        }
+
+        #activity1, #activity4 {
+            height: 445px;
+        }
+
+        #activity1 img, #activity4 img {
+            height: 390px;
+        }
+    }
+
     /* FOOTER  */
 footer {
     background-color: #F2F2F2;
+    /* padding: 30px 20px 30px 20px; */
 }
 #links ul {
     padding: 0; /* utilisé pour supprimer le margin auto de ul */
+    margin: 5px 0 0 0;
+}
+
+#links {
+    padding: 40px 20px 40px 20px;
 }
 .links_list {
     min-width: 250px;
-}
-h3 {
-    font-size: 1em;
+    margin: 0 0 25px 0;
 }
 #links li {
     font-size: 0.9em;
 }
-    @media screen and (max-width: 700px) {
-        #links {
-            padding: 25px 25px 25px 25px;
-        }
-    }
+
+
     @media screen and (min-width: 701px) {
         footer {
-            padding-left: 15%;
-            padding-right: 15%;
+            display: flex;
+            justify-content: center;
         }
         #links {
             display: flex;
-            flex-basis: auto;
-            flex-wrap: wrap;
-            padding: 50px;
+            justify-content: space-between;
+            line-height: 1.5em;
+            width: 1440px;
+            padding: 40px 50px 40px 50px;
         }
         .links_list {
             flex-grow: 1;
