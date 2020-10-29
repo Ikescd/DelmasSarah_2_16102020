@@ -24,6 +24,7 @@
             </nav>
         </header>
 
+
         <section id="searching_tool"> <!-- contain texte "Trouvez votre hébergement...", search by city + preferences filters -->
                 
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -36,26 +37,27 @@
                         
                 <input type="search" name="search_city" id="search_input" value="Marseille, France">
 
-                <button id="search_button" type="button">
+                <button id="search_button" type="submit">
                     <span id="search_web">Rechercher</span>
-                    <div id="lens_icon" class="icons">
-                        <i class="fas fa-search fa-lg" id="search_mobile"></i>
-                    </div>
+                    <span id="search_mobile">
+                        <i class="fas fa-search fa-lg icons" id="lens_icon"></i>
+                    </span>
                 </button>
             </form> <!-- search_form closin' form -->
                    
                 <div id="filters"> <!-- preferences filters -->
-                    <h2>Filtres</h2>
+                    <h3>Filtres</h3>
 
-                    <div id="filter_list"> 
+                    <div id="filter_list">
+
                         <form class="filter_form" role="search">
                             <div class="filter_icon">
                                 <i class="fas fa-money-bill-wave fa-lg"></i>
                             </div>
     
-                            <button class="filter_button">
-                                <span class="filter_choice">Économique</span>
-                            </button>
+                            <select class="filter_button">
+                                <option value="cheap">Économique</option>
+                            </select>
                         </form> <!-- search_form closin' form "Économique" -->
     
                         <form class="filter_form" role="search">
@@ -63,9 +65,9 @@
                                 <i class="fas fa-child fa-lg"></i>
                             </div>
     
-                            <button class="filter_button">
-                                <span class="filter_choice">Familial</span>
-                            </button>
+                            <select class="filter_button">
+                                <option value="family">Familial</option>
+                            </select>
                         </form> <!-- search_form closin' form "Familial" -->
     
                         <form class="filter_form" role="search">
@@ -73,9 +75,9 @@
                                 <i class="fas fa-heart fa-lg"></i>
                             </div>
     
-                            <button class="filter_button">
-                                <span class="filter_choice">Romantique</span>
-                            </button>
+                            <select class="filter_button">
+                                <option value="romantic">Romantique</option>
+                            </select>
                         </form> <!-- search_form closin' form "Romantique -->
     
                         <form class="filter_form" role="search">
@@ -83,9 +85,9 @@
                                 <i class="fas fa-dog fa-lg"></i>
                             </div>
 
-                            <button class="filter_button">
-                                <span class="filter_choice">Animaux autorisés</span>
-                            </button>
+                            <select class="filter_button">
+                                <option value="ok_pet">Animaux autorisés</option>
+                            </select>
                         </form> <!-- search_form closin' form "Animaux autorisés" -->
                     </div> <!-- filter_list closin' div -->
                 </div> <!-- filters closing div -->
@@ -97,59 +99,70 @@
         </section> <!-- searching_tool closin' section -->
 
 
+        <section id="popular_and_hebergement">
+        <!-- ASIDE POPULAIRES -->
+                
+            <aside id="popular">
+                
+                <div id="popular_room_list">
+                    <h2>Les plus populaires</h2>
+                    <i class="fas fa-chart-line fa-lg"></i> 
+                </div> <!-- popular_room_list closin' div -->
 
-
-            <section id="popular_and_hebergement">
-            <!-- ASIDE POPULAIRES -->
-                <aside id="popular">
-                    <div id="popular_room_list">
-                        <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2> 
-                    </div> <!-- div fermante popular -->
                     <div class="popular_room">
+                        
                         <div class="popular_room_picture">
                             <img src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre de l'Hôtel Le Soleil du matin">
-                        </div> <!-- div fermante popular_room_picture -->
+                        </div> <!-- popular_room_picture closin' div -->
+                        
                         <div class="popular_room_description">
-                            <p>
-                                <span class="popular_name popular_bolder">Hôtel Le Soleil du matin</span><br>
-                                Nuit à partir de <span class="popular_bolder">25€</span><br>
-                                <span class="popular_notation">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </span> <!-- div fermante popular_notation -->
-                            </p>
-                        </div> <!-- div fermante popular_room_description -->
-                    </div> <!-- div fermante popular_room -->
+                            <div>
+                                <h3>Hôtel Le Soleil du matin</h3>
+                                Nuit à partir de <strong>128€</strong>
+                            </div>
+
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- popular_notation closin' div -->
+                            
+                        </div> <!-- popular_room_description closin' div -->
+                    </div> <!-- popular_room closin' div -->
+
                     <div class="popular_room">
                         <div class="popular_room_picture">
                             <img src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôte">
-                        </div> <!-- div fermante popular_room_picture -->
+                        </div> <!-- popular_room_picture closin' div -->
+
                         <div class="popular_room_description">
-                            <p>
-                                <span class="popular_name popular_bolder">Au coeur de l'eau, Chambre d'hôtes</span><br>
-                                Nuit à partir de <span class="popular_bolder">71€</span><br>
-                                <span class="popular_notation">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </span> <!-- div fermante popular_notation -->
-                            </p>
-                        </div> <!-- div fermante popular_room_description -->
-                    </div> <!-- div fermante popular_room -->
+                            <div>
+                                <h3>Au coeur de l'eau, chambre d'hôtes</h3>
+                                Nuit à partir de <strong>71€</strong>
+                            </div>
+
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                            </span> <!-- popular_notation closin' div -->
+                        </div> <!-- popular_room_description closin' div -->
+                    </div> <!-- popular_room closin' div -->
+
                     <div class="popular_room">
                         <div class="popular_room_picture">
                             <img src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
-                        </div> <!-- div fermante popular_room_picture -->
+                        </div> <!-- popular_room_picture closin' div -->
                         <div class="popular_room_description">
-                            <p>
-                                <span class="popular_name popular_bolder">Hôtel Tout bleu et blanc</span><br>
-                                Nuit à partir de <span class="popular_bolder">68€</span><br>
-                                <span class="popular_notation">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </span> <!-- div fermante popular_notation -->
-                            </p>
-                        </div> <!-- div fermante popular_room_description -->
-                    </div> <!-- div fermante popular_room -->
-                </aside>
+                            <div>
+                                <h3>Hôtel Tout bleu et blanc</h3>
+                                Nuit à partir de <strong>68€</strong>
+                            </div>
+
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                            </span> <!-- popular_notation closin' div -->
+                        </div> <!-- popular_room_description closin' div -->
+                    </div> <!-- popular_room closin' div -->
+            </aside>
             <!-- ARTICLE HEBERGEMENTS -->
-                <article id="hebergements">
+            <article id="hebergements">
                     <h2>Hébergements à Marseille</h2>
                         <div id="rooms_list">
                             <div class="room">
@@ -226,10 +239,11 @@
                             </div> <!-- div fermante room -->
                         </div> <!-- div fermante rooms_list -->
                     <a href="#">Afficher plus</a>
-                </article>
-            </section>
+            </article>
 
-            <section>
+        </section>
+
+        <section>
             <!-- ARTICLE ACTIVITES -->
                 <article id="activities">
                     <h2>Activités à Marseille</h2>
@@ -284,7 +298,7 @@
                             </div> <!-- div fermante activity -->
                         </div> <!-- div fermante activity_list -->
                 </article>   
-            </section>
+        </section>
             
     </div> <!-- div fermante de bloc_page -->
 
