@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    
+
     <div id="bloc_page"> <!-- do not contain the footer bc of the background footer -->
         
         <header> <!-- contains logo "Reservia", inscription "s'inscrire" + nav "hébergements" and "activités" -->
@@ -23,7 +23,6 @@
                 <!-- use a simple <a href> instead of <nav> bc easier to manage -->
             </nav>
         </header>
-
 
         <section id="searching_tool"> <!-- contain texte "Trouvez votre hébergement...", search by city + preferences filters -->
                 
@@ -99,146 +98,192 @@
         </section> <!-- searching_tool closin' section -->
 
 
-        <section id="popular_and_hebergement">
-        <!-- ASIDE POPULAIRES -->
+        <section id="popular_and_hosting"> <!-- contains aside "Les plus populaires" and article "Hébergements-->
                 
-            <aside id="popular">
-                
+            <aside id="popular"> <!-- contains aside "Les plus populaires" -->
                 <div id="popular_room_list">
                     <h2>Les plus populaires</h2>
                     <i class="fas fa-chart-line fa-lg"></i> 
                 </div> <!-- popular_room_list closin' div -->
 
-                    <div class="popular_room">
-                        
-                        <div class="popular_room_picture">
-                            <img src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre de l'Hôtel Le Soleil du matin">
-                        </div> <!-- popular_room_picture closin' div -->
-                        
-                        <div class="popular_room_description">
-                            <div>
-                                <h3>Hôtel Le Soleil du matin</h3>
+                <div class="popular_room">
+                    <div class="popular_room_picture">
+                        <img src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre de l'Hôtel Le Soleil du matin">
+                    </div> <!-- popular_room_picture closin' div -->
+                    
+                    <div class="popular_room_description">
+                        <div>
+                            <h3>Hôtel Le Soleil du matin</h3>
+                            <p>
                                 Nuit à partir de <strong>128€</strong>
-                            </div>
+                            </p>
+                        </div>
 
+                        <span class="popular_notation">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </span> <!-- popular_notation closin' div -->    
+                    </div> <!-- popular_room_description closin' div -->
+                </div> <!-- popular_room closin' div -->
+
+                <div class="popular_room">
+                    <div class="popular_room_picture">
+                        <img src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôte">
+                    </div> <!-- popular_room_picture closin' div -->
+
+                    <div class="popular_room_description">
+                        <div>
+                            <h3>Au coeur de l'eau, chambre d'hôtes</h3>
+                            <p>
+                                Nuit à partir de <strong>71€</strong>
+                            </p>
+                        </div>
+
+                        <span class="popular_notation">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                        </span> <!-- popular_notation closin' div -->
+                    </div> <!-- popular_room_description closin' div -->
+                </div> <!-- popular_room closin' div -->
+
+                <div class="popular_room">
+                   <div class="popular_room_picture">
+                        <img src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
+                    </div> <!-- popular_room_picture closin' div -->
+                        
+                    <div class="popular_room_description">
+                        <div>
+                            <h3>Hôtel Tout bleu et blanc</h3>
+                            <p>
+                                Nuit à partir de <strong>68€</strong>
+                            </p>
+                        </div>
+
+                        <span class="popular_notation">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                        </span> <!-- popular_notation closin' div -->
+                    </div> <!-- popular_room_description closin' div -->
+                </div> <!-- popular_room closin' div -->
+            </aside> <!-- popular closin' aside-->
+
+            <article id="hosting"> <!-- contains article "Hébergements" -->
+                <h2>Hébergements à Marseille</h2>
+
+                <div id="rooms_list">
+                    <div class="room">
+                        <div class="room_picture">
+                            <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre de l'Auberge de la Cannebière">
+                        </div> <!-- room_picture closin' div -->
+                             
+                         <div class="room_description">
+                             <div>
+                                 <h3>Auberge de la Cannebière</h3>
+                                 <p>
+                                    Nuit à partir de <strong>25€</strong>
+                                 </p>
+                             </div>
+     
+                             <span class="popular_notation">
+                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
+                             </span> <!-- notation closin' div -->
+                        </div> <!-- room_description closin' div -->
+                     </div> <!-- room closin' div -->         
+
+                    <div class="room">
+                        <div class="room_picture">
+                            <img src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre de l'Hôtel du Port">
+                        </div> <!-- room_picture closin' div -->
+                             
+                        <div class="room_description">
+                            <div>
+                                <h3>Hôtel du Port</h3>
+                                <p>
+                                   Nuit à partir de <strong>52€</strong>
+                                </p>
+                            </div>
+    
                             <span class="popular_notation">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </span> <!-- popular_notation closin' div -->
-                            
-                        </div> <!-- popular_room_description closin' div -->
-                    </div> <!-- popular_room closin' div -->
+                            </span> <!-- notation closin' div -->
+                       </div> <!-- room_description closin' div -->
+                    </div> <!-- room closin' div -->   
 
-                    <div class="popular_room">
-                        <div class="popular_room_picture">
-                            <img src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôte">
-                        </div> <!-- popular_room_picture closin' div -->
-
-                        <div class="popular_room_description">
+                    <div class="room">
+                        <div class="room_picture">
+                            <img src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre de l'Hôtel des Mouettes">
+                        </div> <!-- room_picture closin' div -->
+                             
+                        <div class="room_description">
                             <div>
-                                <h3>Au coeur de l'eau, chambre d'hôtes</h3>
-                                Nuit à partir de <strong>71€</strong>
+                                <h3>Hôtel du Port</h3>
+                                <p>
+                                   Nuit à partir de <strong>52€</strong>
+                                </p>
                             </div>
-
+    
                             <span class="popular_notation">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                            </span> <!-- popular_notation closin' div -->
-                        </div> <!-- popular_room_description closin' div -->
-                    </div> <!-- popular_room closin' div -->
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- notation closin' div -->
+                       </div> <!-- room_description closin' div -->
+                    </div> <!-- room closin' div -->
 
-                    <div class="popular_room">
-                        <div class="popular_room_picture">
-                            <img src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
-                        </div> <!-- popular_room_picture closin' div -->
-                        <div class="popular_room_description">
+                    <div class="room">
+                        <div class="room_picture">
+                            <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre de l'Hôtel de la mer">
+                        </div> <!-- room_picture closin' div -->
+                             
+                         <div class="room_description">
                             <div>
-                                <h3>Hôtel Tout bleu et blanc</h3>
-                                Nuit à partir de <strong>68€</strong>
+                                <h3>Hôtel du Port</h3>
+                                <p>
+                                   Nuit à partir de <strong>52€</strong>
+                                </p>
                             </div>
-
+    
                             <span class="popular_notation">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                            </span> <!-- popular_notation closin' div -->
-                        </div> <!-- popular_room_description closin' div -->
-                    </div> <!-- popular_room closin' div -->
-            </aside>
-            <!-- ARTICLE HEBERGEMENTS -->
-            <article id="hebergements">
-                    <h2>Hébergements à Marseille</h2>
-                        <div id="rooms_list">
-                            <div class="room">
-                                <div class="room_picture">
-                                    <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre de l'Auberge de la Cannebière">
-                                </div>
-                                <div class="room_description">
-                                    <p>
-                                        <span class="room_bolder room_name">Auberge de la Cannebière</span><br>
-                                        Nuit à partir de <span class="room_bolder">25€</span><br>
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                    </p>
-                                </div> <!-- div fermante room_description -->
-                            </div> <!-- div fermante room -->
-                            <div class="room">
-                                <div class="room_picture">
-                                    <img src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre de l'Hôtel du Port">
-                                </div>
-                                <div class="room_description">
-                                    <p>
-                                        <span class="room_bolder room_name">Hôtel du Port</span><br> 
-                                        Nuit à partir de <span class="room_bolder">52€</span><br>        
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                    </p>
-                                </div> <!-- div fermante room_description -->
-                            </div> <!-- div fermante room -->
-                            <div class="room">
-                                <div class="room_picture">
-                                    <img src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre de l'Hôtel des Mouettes">
-                                </div>
-                                <div class="room_description">
-                                    <p>
-                                        <span class="room_bolder room_name">Hôtel des Mouettes</span><br> 
-                                        Nuit à partir de <span class="room_bolder">76€</span><br>
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                    </p>
-                                </div> <!-- div fermante room_description -->
-                            </div> <!-- div fermante room -->
-                            <div class="room">
-                                <div class="room_picture">
-                                    <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre de l'Hôtel de la mer">
-                                </div>
-                                <div class="room_description">
-                                    <p>
-                                        <span class="room_bolder room_name">Hôtel de la Mer</span><br> 
-                                        Nuit à partir de <span class="room_bolder">46€</span><br>
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                    </p>
-                                </div> <!-- div fermante room_description -->
-                            </div> <!-- div fermante room -->
-                            <div class="room">
-                                <div class="room_picture">
-                                    <img src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre de l'Auberge Le Panier">
-                                </div>
-                                <div class="room_description">
-                                    <p>
-                                        <span class="room_bolder room_name">Auberge Le Panier</span><br> 
-                                        Nuit à partir de <span class="room_bolder">23€</span><br>
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                    </p>
-                                </div> <!-- div fermante room_description -->
-                            </div> <!-- div fermante room -->
-                            <div class="room">
-                                <div class="room_picture">
-                                    <img src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre de l'Hôtel Chez Amina">
-                                </div>
-                                <div class="room_description">
-                                    <p>
-                                        <span class="room_bolder room_name">Hôtel Chez Amina</span><br> 
-                                        Nuit à partir de <span class="room_bolder">96€</span><br>
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="star_grey fas fa-star"></i>
-                                    </p>
-                                </div> <!-- div fermante room_description -->
-                            </div> <!-- div fermante room -->
-                        </div> <!-- div fermante rooms_list -->
-                    <a href="#">Afficher plus</a>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- notation closin' div -->
+                       </div> <!-- room_description closin' div -->
+                    </div> <!-- room closin' div -->
+
+                    <div class="room">
+                        <div class="room_picture">
+                            <img src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre de l'Auberge Le Panier">
+                        </div> <!-- room_picture closin' div -->
+                             
+                        <div class="room_description">
+                            <div>
+                                <h3>Hôtel du Port</h3>
+                                <p>
+                                   Nuit à partir de <strong>52€</strong>
+                                </p>
+                            </div>
+    
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- notation closin' div -->
+                       </div> <!-- room_description closin' div -->
+                    </div> <!-- room closin' div -->
+
+                    <div class="room">
+                        <div class="room_picture">
+                            <img src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre de l'Hôtel Chez Amina">
+                        </div> <!-- room_picture closin' div -->
+                             
+                        <div class="room_description">
+                            <div>
+                                <h3>Hôtel du Port</h3>
+                                <p>
+                                   Nuit à partir de <strong>52€</strong>
+                                </p>
+                            </div>
+    
+                            <span class="popular_notation">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </span> <!-- notation closin' div -->
+                       </div> <!-- room_description closin' div -->
+                    </div> <!-- room closin' div -->
+                </div> <!-- div fermante rooms_list -->
+
+                <a href="#">Afficher plus</a>
             </article>
 
         </section>

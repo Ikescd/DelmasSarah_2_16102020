@@ -1,3 +1,5 @@
+    /* ALL SITE : page's elements */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,15 +16,16 @@ body {
     --second_color: #DEEBFF;
     --third_color: #F2F2F2;
     --four_color: #D9D9D9;
-    color: var(--basic_color, black); /* need a basic color for the entire site */
+    color: var(--basic_color, black); /* need a basic color for the entire site + I  add an extra color in case of the var does not working */
 }
 
 button:hover {
     cursor: pointer;
 }
+
 .fa, .fas, .far {
     font-family: "Font Awesome 5 Free";
-    color: var(--first_color, #0065FC); /* add an extra color in case of the var does not working */
+    color: var(--first_color, #0065FC);
 }
 
 #bloc_page {
@@ -45,25 +48,21 @@ li {
 h1 {
     font-size: 1.5em;
 }
-
 h2 {
     font-size: 1.2em;
     padding: 10px 15px 10px 0;
 }
-
 h3 {
-    font-size: 1.3em;
-    font-weight: bold;
-    padding: 10px 15px 10px 0;
+    font-size: 1em;
+    padding: 0 15px 0 0;
 }
-
 p {
     margin: 10px 0 10px 0;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 
-    /* HEADER  */
+    /* HEADER : logo + navbar (with inscription) */
 header {
     height: 130px;
 }
@@ -88,7 +87,7 @@ header img {
     }
 
 
-    /* NAVBAR */
+    /* NAVBAR : inscription + nav*/
 #inscription {
     font-weight: bold;
     color: var(--first_color, #0065FC);
@@ -149,7 +148,7 @@ header img {
 
 
 
-/* DIV SEARCHING TOOL */
+/* SECTION SEARCHING TOOL : section description + search city + prefrences filters*/
 
 #searching_tool {
     margin: 20px;
@@ -171,7 +170,7 @@ header img {
     font-family: "Raleway";
     font-size: 1em;
     font-weight: bold;
-}
+} /* add to counter normal behavior of input */
 
 #search_icon, .filter_icon {
     width: 50px;
@@ -187,7 +186,7 @@ header img {
     margin-top: -1px;
   }
 
-    /* RECHERCHE PAR VILLE */
+    /* CITY SEARCH */
 #search_form {
     justify-content: space-between;
     border: var(--third_color, #F2F2F2) 1px solid;
@@ -251,7 +250,7 @@ header img {
         }
     }
 
-    /* FILTRES DE PREFERENCES */
+    /* PREFERENCES' FILTER */
 
 #filter_list {
     display: flex;
@@ -307,34 +306,96 @@ header img {
     margin-right: 5px;
 }
 
-#activities, #hebergements {
+#activities {
     display: none;
 }
 
 
     /* SECTION HOSTING + ACTIVITES + ASIDE */
 
+#popular_and_hosting {
+    display: flex;
+    flex-direction: column;
+}
+
+aside, #hosting {
+    padding: 35px 20px 0px 20px;
+    width: fit-content;
+}
+
+    @media screen and (min-width: 900px) {
+        #popular_and_hosting {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 20px 50px 20px 50px;
+        }
+        
+        #hosting {
+            margin-right: 30px;
+        }
+        aside, #hosting {
+            padding: 40px 30px 20px 30px;
+            border-radius: 25px;
+            max-width: fit-content;
+        }
+    }
+
 .star_grey {
     color: var(--four_color, #D9D9D9);
 }
 
+.room_picture img, .popular_room_picture img {
+    object-fit: cover;
+}
 
-    /*ASIDE POPULAR*/
-aside {
-    background-color: #F2F2F2;
-    padding: 35px 20px 35px 20px;
+.popular_room, .room {
+    border: 5px var(--white_color, white) solid;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    box-shadow: 1px 1px 12px var(--four_color, #D9D9D9);
+    background-color: var(--white_color, white);
+}
+
+.popular_room_description p, .room_description p {
+    margin: 0;
+}
+
+.popular_notation, .room_notation {
+    padding-bottom: 5px;
+    font-size: 0.85em;
+}
+
+.popular_room:hover, .room:hover {
+    box-shadow: 1px 1px 12px #555;
+    cursor: zoom-in;
 }
 
     @media screen and (min-width: 900px) {
-        aside {
-            margin: 20px 40px 20px 40px;
-            padding: 50px;
-            border-radius: 25px;
-            max-width: fit-content;
-            order: 2;
+        .popular_room, .room {
+            margin: 30px 0 30px 0;
         }
+    }   
+
+    .popular_room_description, .room_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 1.2em;
     }
 
+
+/*ASIDE POPULAR */
+
+aside {
+    background: var(--third_color, #F2F2F2);
+}
+    @media screen and (max-width: 899px) {
+        aside {
+            max-width: 420px;
+        }
+    }
 #popular_room_list {
     display: flex;
     justify-content: space-between;
@@ -347,46 +408,56 @@ aside {
 
 .popular_room {
     display: flex;
-    max-width: 335px;
-    height: 145px;
-    border: 4px var(--white_color, white) solid;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 10px 0 10px 0;
-    padding: 0;
-    box-shadow: 1px 1px 12px var(--four_color, #D9D9D9);
-    background-color: var(--white_color, white);
-} 
-
-@media screen and (min-width: 900px) {
-    .popular_room {
-        max-width: 345px;
-        margin: 30px 0 30px 0;
-    }
-}
-
-.popular_room:hover {
-    box-shadow: 1px 1px 12px #555;
-    cursor: zoom-in;
-}
-.popular_room_picture {
-    width: 135px;
+    flex-direction: row;
+    height: 135px;
 }
 
 .popular_room_picture img {
-    object-fit: cover;
     width: 135px;
     height: 100%;
 }
-
 .popular_room_description {
-    width: 212px;
-    line-height: 1em;
-    padding: 15px;
+    padding: 10px 15px 0 10px;
+}
+
+
+    /* ARTICLE HOSTING : */
+
+#rooms_list {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.room {
+    display : flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 325px;
+    max-height: 190px;
 }
+
+.room_picture img {
+    width: 100%;
+    height: 115px;
+}
+
+.room_description {
+    height: 75px;
+    margin: 0 15px 0 10px;
+}
+
+        @media screen and (min-width: 900px) {
+            #hosting {
+                background: var(--third_color, #F2F2F2);
+                max-width: 880px;
+            }
+
+            .room {
+                width: 235px;
+            }
+        }
 
 
     /* FOOTER  */
