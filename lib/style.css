@@ -1,5 +1,14 @@
+/* Comments legend
+GENERAL NAME : specific element, specific element, etc.
+    --> what's following contains.
+(note) text
+    --> explain the line
+*/
+
+
     /* ALL SITE : page's elements */
 
+        /* general elements */
 * {
     margin: 0;
     padding: 0;
@@ -8,24 +17,14 @@
 
 body {
     font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    line-height: 1.5em;
-    --black_color: black; /* you can change the colors flagship site without going over all the code: optimization */
-    --white_color: white;
-    --first_color: #0065FC;
-    --second_color: #DEEBFF;
-    --third_color: #F2F2F2;
+    font-size: 1em;
+    --black: black; /* you can change the colors flagship site without going over all the code: optimization */
+    --white: white;
+    --primary_color: #0065FC;
+    --secondary_color: #DEEBFF;
+    --tertiary_color: #F2F2F2;
     --four_color: #D9D9D9;
-    color: var(--basic_color, black); /* need a basic color for the entire site + I  add an extra color in case of the var does not working */
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.fa, .fas, .far {
-    font-family: "Font Awesome 5 Free";
-    color: var(--first_color, #0065FC);
+    color: var(--black); /* in case of personnal settings user */
 }
 
 #bloc_page {
@@ -33,116 +32,137 @@ button:hover {
     margin: auto;
 }
 
-a, a:visited, a:focus {
+        /* specifics elements */
+a {
     text-decoration: none;
-    color: var(--black_color, black)
+    color: var(--black)
 }
 a:hover {
-    color: var(--first_color, black)
+    color: var(--primary_color)
+}
+
+.fa, .fas, .far {
+    font-family: "Font Awesome 5 Free";
+    color: var(--primary_color);
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+    background-color: lawngreen;
+}
+h2 {
+    font-size: 1.2em;
+    background-color: lawngreen;
+}
+h3 {
+    font-size: 1.1em;
+    background-color: lawngreen;
 }
 
 li {
     list-style: none;
 }
 
-h1 {
-    font-size: 1.5em;
-}
-h2 {
-    font-size: 1.2em;
-    padding: 10px 15px 10px 0;
-}
-h3 {
-    font-size: 1em;
-    padding: 0 15px 0 0;
-}
 p {
-    margin: 10px 0 10px 0;
     font-size: 0.85em;
 }
 
+button:hover {
+    cursor: pointer;
+}
 
-    /* HEADER : logo + navbar (with inscription) */
+/* ------------------------- */
+/*                           */
+/*          header           */
+/*                           */
+/* ------------------------- */
+
 header {
     height: 130px;
-}
+} 
 header img {
-    min-height: 45px;
+    width: 100px;
+    height: 48px;
+    margin: 23px 0 19px 20px;
 }
 
-#logo {
-    margin: 25px 0 0 20px;
-}
-
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 600px) {
         header {
-            height: 120px;
+            height: 125px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
-        #logo {
-            margin: 5px 0 0 55px
+        header img {
+            margin: 43px 0 35px 50px;
         }
     }
 
+/* ------------------------- */
+/*          menu           */
+/* ------------------------- */
 
-    /* NAVBAR : inscription + nav*/
-#inscription {
-    font-weight: bold;
-    color: var(--first_color, #0065FC);
-}
-
-#inscription:hover {
-    color: black;
-}
-
-#navbar {
-    padding: 0;
+#menu {
     display: flex;
-    justify-content: center;
-}
-
-.menu_list, .complete_list {
-    flex: 1;
+    flex-direction: row;
     text-align: center;
 }
-
-    @media screen and (max-width: 899px) {
-        #inscription {
-            position: absolute;
-            top: 40px;
-            right: 15px;
+    @media screen and (min-width: 900px) {
+        #menu {
+            margin: 0 50px 0 0;
+            min-width: 400px;
+            max-width: 436px;
         }
-        .menu_list {
-            padding: 15px 0 15px 0;
-            border-bottom: #F2F2F2 solid 3px;
-        }
-        .menu_list:hover {
-            border-bottom: #0065FC solid 3px;
+        #menu a {
+            border-radius: 0 0 25px 25px;
         }
     }
 
-    @media screen and (min-width: 900px) {
-        #navbar {
-            width: 450px;
-            height: 120px;
-            margin: 0 35px 0 0;
+/* -- inscription -- */
+#inscription {
+    font-weight: bold;
+    color: var(--primary_color);
+}
+#inscription:hover {
+    color: var(--black, black);
+}
+    @media screen and (max-width: 599px) {
+        #inscription {
+            position: absolute;
+            top: 41px;
+            right: 20px;
+            border: none;
         }
-        #navbar a {
-            border-radius: 0 0 25px 25px;
-        }
-
+    }
+    @media screen and (min-width: 600px) {
         #inscription:hover {
-            background-color: #DEEBFF;
+            background-color: var(--secondary_color);
         }
+    }
 
-        .complete_list {
-            padding: 45px 0 45px 0;
-            border-top: white solid 3px;
+/* -- menn_style & navbar_style -- */
+
+.menu_style {
+    flex: 1;
+    padding: 12px;
+    border-bottom: var(--tertiary_color) solid 3px;
+}
+.menu_style:hover {
+    border-bottom: var(--primary_color) solid 3px;
+}
+
+    @media screen and (min-width: 600px) {
+        .navbar_style {
+            flex: 1;
+            padding: 45px 20px 45px 20px;
+            border-top: var(--white) solid 3px;
         }
-        .complete_list:hover {
-            border-top: #0065FC solid 3px;
+        .navbar_style:hover {
+            border-top: var(--primary_color) solid 3px;
+        }
+        .menu_style, .menu_style:hover {
+            border-bottom: none;
         }
     }
 
@@ -184,44 +204,44 @@ header img {
 #search_button {
     min-height: 50px;
     margin-top: -1px;
-  }
+}
 
     /* CITY SEARCH */
 #search_form {
     justify-content: space-between;
-    border: var(--third_color, #F2F2F2) 1px solid;
+    border: var(--tertiary_color, #F2F2F2) 1px solid;
     border-radius: 15px;
     margin: 20px 0 20px 0;
     max-width: fit-content;
 }
 
 #search_icon {
-    background-color: var(--third_color, #F2F2F2);
+    background-color: var(--tertiary_color, #F2F2F2);
 }
 
 #search_icon i {
-    color: var(--black_color, black);
+    color: var(--black, black);
 }
 
 #search_button, #search_button i {
-    color: var(--white_color, white);
+    color: var(--white, white);
     width: 50px;
     height: 50px;
 }
 #search_button:hover, #search_button i:hover {
-    color: var(--first_color, #0065FC);
+    color: var(--primary_color, #0065FC);
 }
 
 #search_button {
     min-width: 50px;
     max-height: 50px;
     border-radius: 0 15px 15px 0;
-    background-color: var(--first_color, #0065FC);
-    border: 1px solid var(--first_color, #0065FC);
+    background-color: var(--primary_color, #0065FC);
+    border: 1px solid var(--primary_color, #0065FC);
 }
 
 #search_button:hover {
-    background-color: var(--second_color, #DEEBFF);
+    background-color: var(--secondary_color, #DEEBFF);
     border: none;
 }
 
@@ -270,23 +290,23 @@ header img {
 
 .filter_form {
     margin: 0 12px 10px 0;
-    border: var(--third_color, #F2F2F2) 2px solid;
+    border: var(--tertiary_color, #F2F2F2) 2px solid;
 }
 .filter_form:hover, .filter_form:active, .filter_form:focus, .filter_form:visited {
-    border: 2px solid var(--first_color, #0065FC);
-    color: var(--first_color, #0065FC)
+    border: 2px solid var(--primary_color, #0065FC);
+    color: var(--primary_color, #0065FC)
 }
 
 .filter_form, .filter_button {
     width: fit-content;
     border-radius: 50px;
-    background-color: var(--white_color, white);
+    background-color: var(--white, white);
 }
 
 .filter_icon {
     border-radius: 25px;
     width: 50px;
-    background-color: var(--second_color, #DEEBFF);
+    background-color: var(--secondary_color, #DEEBFF);
     margin: -2px 0 -2px -2px;
 }
 
@@ -299,7 +319,7 @@ header img {
 }
 
 #info_icon i {
-    border: var(--third_color, #F2F2F2) 1px solid;
+    border: var(--tertiary_color, #F2F2F2) 1px solid;
     padding: 5px 8px 5px 8px;
     text-align: center;
     border-radius: 50%;
@@ -345,7 +365,7 @@ aside, #hosting {
 }
 
 .popular_room, .room {
-    border: 5px var(--white_color, white) solid;
+    border: 5px var(--white, white) solid;
     border-radius: 25px;
     overflow: hidden;
     margin: 10px 0 10px 0;
@@ -353,7 +373,7 @@ aside, #hosting {
 }
 .popular_room, .room, .activity {
     box-shadow: 1px 1px 12px var(--four_color, #D9D9D9);
-    background-color: var(--white_color, white);
+    background-color: var(--white, white);
 }
 
 .popular_room_description p, .room_description p {
@@ -387,7 +407,7 @@ aside, #hosting {
 /*ASIDE POPULAR */
 
 aside {
-    background: var(--third_color, #F2F2F2);
+    background: var(--tertiary_color, #F2F2F2);
 }
     @media screen and (max-width: 899px) {
         aside {
@@ -402,7 +422,7 @@ aside {
 }
 
 #popular_room_list i {
-    color: var(--black_color, black);
+    color: var(--black, black);
 }
 
 .popular_room {
@@ -446,7 +466,7 @@ aside {
 
         @media screen and (min-width: 900px) {
             #hosting {
-                background: var(--third_color, #F2F2F2);
+                background: var(--tertiary_color, #F2F2F2);
                 max-width: 880px;
             }
 

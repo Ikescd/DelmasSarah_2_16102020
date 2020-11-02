@@ -14,12 +14,12 @@
     <div id="bloc_page"> <!-- do not contain the footer bc of the background footer -->
         
         <header> <!-- contains logo "Reservia", inscription "s'inscrire" + nav "hébergements" and "activités" -->
-            <img src="./images/logo/Reservia.svg" alt="Logo de Reservia" id="logo">
-
-            <nav id="navbar"> <!-- contains "hébergements", "activités" and "s'inscrire" -->
-                <a href="#hosting" class="menu_list complete_list">Hébergements</a>
-                <a href="#activites" class="menu_list complete_list">Activités</a>
-                <a href="#" id="inscription" class="complete_list">S'inscrire</a>
+            <img src="./images/logo/Reservia.svg" alt="Logo de Reservia">
+            
+            <nav id="menu"> <!-- contains "hébergements", "activités" and "s'inscrire" -->
+                <a href="#hosting" class="navbar_style menu_style">Hébergements</a>
+                <a href="#activities" class="navbar_style menu_style">Activités</a>
+                <a href="#" id="inscription" class="navbar_style inscription">S'inscrire</a>
                 <!-- use a simple <a href> instead of <nav> bc easier to manage -->
             </nav>
         </header>
@@ -43,8 +43,8 @@
                     </span>
                 </button>
             </form> <!-- search_form closin' form -->
-                   
-                <div id="filters"> <!-- preferences filters -->
+
+            <div id="filters"> <!-- preferences filters -->
                     <h3>Filtres</h3>
 
                     <div id="filter_list">
