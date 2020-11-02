@@ -1,14 +1,17 @@
-/* Comments legend
-GENERAL NAME : specific element, specific element, etc.
-    --> what's following contains.
-(note) text
-    --> explain the line
-*/
+/* mobile design : basic design */
+tablet design : 
+    header : 
+    footer
 
 
-    /* ALL SITE : page's elements */
 
-        /* general elements */
+
+/* ------------------------- */
+/*                           */
+/*           SITE            */
+/*                           */
+/* ------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,13 +21,15 @@ GENERAL NAME : specific element, specific element, etc.
 body {
     font-family: "Raleway", sans-serif;
     font-size: 1em;
-    --black: black; /* you can change the colors flagship site without going over all the code: optimization */
+    --black: black; /* you can change the colors site without going over all the code: optimization */
     --white: white;
     --primary_color: #0065FC;
     --secondary_color: #DEEBFF;
     --tertiary_color: #F2F2F2;
     --four_color: #D9D9D9;
     color: var(--black); /* in case of personnal settings user */
+    margin: 0;
+    padding: 0;
 }
 
 #bloc_page {
@@ -32,7 +37,12 @@ body {
     margin: auto;
 }
 
-        /* specifics elements */
+
+/* ------------------------- */
+/*      specific elements    */
+/* ------------------------- */
+
+/* -- links -- */
 a {
     text-decoration: none;
     color: var(--black)
@@ -41,12 +51,18 @@ a:hover {
     color: var(--primary_color)
 }
 
+/* -- fontawesome -- */
 .fa, .fas, .far {
     font-family: "Font Awesome 5 Free";
     color: var(--primary_color);
     font-size: 1em;
 }
 
+/* -- title & text -- */
+h2, h3, ul {
+    margin: 0;
+    padding: 0;
+}
 h1 {
     font-size: 1.5em;
     background-color: lawngreen;
@@ -59,18 +75,22 @@ h3 {
     font-size: 1.1em;
     background-color: lawngreen;
 }
-
-li {
-    list-style: none;
-}
-
 p {
     font-size: 0.85em;
 }
 
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* -- other -- */
 button:hover {
     cursor: pointer;
 }
+
 
 /* ------------------------- */
 /*                           */
@@ -79,7 +99,7 @@ button:hover {
 /* ------------------------- */
 
 header {
-    height: 130px;
+    height: 132px;
 } 
 header img {
     width: 100px;
@@ -87,7 +107,7 @@ header img {
     margin: 23px 0 19px 20px;
 }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 800px) {
         header {
             height: 125px;
             display: flex;
@@ -100,17 +120,18 @@ header img {
     }
 
 /* ------------------------- */
-/*          menu           */
+/*            menu           */
 /* ------------------------- */
 
 #menu {
     display: flex;
     flex-direction: row;
     text-align: center;
+    margin-bottom: 50px;
 }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 800px) {
         #menu {
-            margin: 0 50px 0 0;
+            padding: 0 50px 0 0;
             min-width: 400px;
             max-width: 436px;
         }
@@ -120,6 +141,7 @@ header img {
     }
 
 /* -- inscription -- */
+
 #inscription {
     font-weight: bold;
     color: var(--primary_color);
@@ -127,7 +149,7 @@ header img {
 #inscription:hover {
     color: var(--black, black);
 }
-    @media screen and (max-width: 599px) {
+    @media screen and (max-width: 799px) {
         #inscription {
             position: absolute;
             top: 41px;
@@ -135,7 +157,7 @@ header img {
             border: none;
         }
     }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 800px) {
         #inscription:hover {
             background-color: var(--secondary_color);
         }
@@ -152,7 +174,7 @@ header img {
     border-bottom: var(--primary_color) solid 3px;
 }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 800px) {
         .navbar_style {
             flex: 1;
             padding: 45px 20px 45px 20px;
@@ -167,426 +189,47 @@ header img {
     }
 
 
+/* ------------------------- */
+/*                           */
+/*          FOOTER           */
+/*                           */
+/* ------------------------- */
 
-/* SECTION SEARCHING TOOL : section description + search city + prefrences filters*/
-
-#searching_tool {
-    margin: 20px;
-}
-
-    @media screen and (min-width: 900px) {
-        #searching_tool {
-            margin: 0 50px 0 50px;
-        }
-    }
-
-#search_form, .filter_form {
-    display: flex;
-    flex-direction: row;
-    height: 48px;
-}
-
-#search_input, #search_button, .filter_button {
-    font-family: "Raleway";
-    font-size: 1em;
-    font-weight: bold;
-} /* add to counter normal behavior of input */
-
-#search_icon, .filter_icon {
-    width: 50px;
-    max-height: 50px;
-    text-align: center;
-    padding-top: 15px;
-    border-radius: 10px;
-    margin: -1px
-}
-
-#search_button {
-    min-height: 50px;
-    margin-top: -1px;
-}
-
-    /* CITY SEARCH */
-#search_form {
-    justify-content: space-between;
-    border: var(--tertiary_color, #F2F2F2) 1px solid;
-    border-radius: 15px;
-    margin: 20px 0 20px 0;
-    max-width: fit-content;
-}
-
-#search_icon {
-    background-color: var(--tertiary_color, #F2F2F2);
-}
-
-#search_icon i {
-    color: var(--black, black);
-}
-
-#search_button, #search_button i {
-    color: var(--white, white);
-    width: 50px;
-    height: 50px;
-}
-#search_button:hover, #search_button i:hover {
-    color: var(--primary_color, #0065FC);
-}
-
-#search_button {
-    min-width: 50px;
-    max-height: 50px;
-    border-radius: 0 15px 15px 0;
-    background-color: var(--primary_color, #0065FC);
-    border: 1px solid var(--primary_color, #0065FC);
-}
-
-#search_button:hover {
-    background-color: var(--secondary_color, #DEEBFF);
-    border: none;
-}
-
-#search_input {
-    border: none;
-    width: 230px;
-    padding-left: 5px;
-}
-
-    @media screen and (max-width: 899px) {        
-        #search_web {
-            display: none;
-        }
-        #lens_icon {
-            padding-top: 15px;
-        }
-    }
-
-    @media screen and (min-width: 900px) {
-        #search_button {
-            padding: 0 20px 0 20px;
-            min-width: 130px;
-        }
-        #search_mobile {
-            display: none;
-        }
-    }
-
-    /* PREFERENCES' FILTER */
-
-#filter_list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 15px 0 15px 0;
-}
-
-    @media screen and (min-width: 900px) {
-        #filters {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: baseline;
-        }
-    }  
-
-.filter_form {
-    margin: 0 12px 10px 0;
-    border: var(--tertiary_color, #F2F2F2) 2px solid;
-}
-.filter_form:hover, .filter_form:active, .filter_form:focus, .filter_form:visited {
-    border: 2px solid var(--primary_color, #0065FC);
-    color: var(--primary_color, #0065FC)
-}
-
-.filter_form, .filter_button {
-    width: fit-content;
-    border-radius: 50px;
-    background-color: var(--white, white);
-}
-
-.filter_icon {
-    border-radius: 25px;
-    width: 50px;
-    background-color: var(--secondary_color, #DEEBFF);
-    margin: -2px 0 -2px -2px;
-}
-
-.filter_button {
-    border: none;
-}
-
-.filter_choice {
-    padding: 0 10px 0 10px;
-}
-
-#info_icon i {
-    border: var(--tertiary_color, #F2F2F2) 1px solid;
-    padding: 5px 8px 5px 8px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
-
-    /* SECTION HOSTING + ACTIVITES + ASIDE */
-
-#popular_and_hosting {
-    display: flex;
-    flex-direction: column;
-}
-
-aside, #hosting {
-    padding: 20px 20px 20px 20px;
-    width: fit-content;
-}
-
-    @media screen and (min-width: 900px) {
-        #popular_and_hosting {
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            margin: 20px 50px 20px 50px;
-        }
-        
-        #hosting {
-            margin-right: 30px;
-        }
-        aside, #hosting {
-            padding: 40px 30px 20px 30px;
-            border-radius: 25px;
-            max-width: fit-content;
-        }
-    }
-
-.star_grey {
-    color: var(--four_color, #D9D9D9);
-}
-
-.room_picture img, .popular_room_picture img, .activity_picture img {
-    object-fit: cover;
-}
-
-.popular_room, .room {
-    border: 5px var(--white, white) solid;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 10px 0 10px 0;
-    padding: 0;
-}
-.popular_room, .room, .activity {
-    box-shadow: 1px 1px 12px var(--four_color, #D9D9D9);
-    background-color: var(--white, white);
-}
-
-.popular_room_description p, .room_description p {
-    margin: 0;
-}
-
-.popular_notation, .room_notation {
-    padding-bottom: 5px;
-    font-size: 0.85em;
-}
-
-.popular_room:hover, .room:hover, .activity:hover {
-    box-shadow: 1px 1px 12px #555;
-    cursor: zoom-in;
-}
-
-    @media screen and (min-width: 900px) {
-        .popular_room, .room {
-            margin: 30px 0 30px 0;
-        }
-    }   
-
-    .popular_room_description, .room_description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        line-height: 1.2em;
-    }
-
-
-/*ASIDE POPULAR */
-
-aside {
-    background: var(--tertiary_color, #F2F2F2);
-}
-    @media screen and (max-width: 899px) {
-        aside {
-            max-width: 420px;
-        }
-    }
-#popular_room_list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-}
-
-#popular_room_list i {
-    color: var(--black, black);
-}
-
-.popular_room {
-    display: flex;
-    flex-direction: row;
-    height: 135px;
-}
-
-.popular_room_picture img {
-    width: 135px;
-    height: 100%;
-}
-.popular_room_description {
-    padding: 10px 15px 0 10px;
-}
-
-
-    /* ARTICLE HOSTING : */
-#hosting h2, #hosting a {
-    margin: 0 0 10px 10px;
-    font-weight: bold;
-}
-
-.room {
-    display : flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 325px;
-    max-height: 190px;
-}
-
-.room_picture img {
-    width: 100%;
-    height: 115px;
-}
-
-.room_description {
-    height: 75px;
-    margin: 0 15px 0 10px;
-}
-
-        @media screen and (min-width: 900px) {
-            #hosting {
-                background: var(--tertiary_color, #F2F2F2);
-                max-width: 880px;
-            }
-
-            #rooms_list {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                margin: 5px 25px 5px 25px;
-            }            
-
-            #hosting h2, #hosting a {
-                margin: 0 0 15px 25px;
-            }
-
-            .room {
-                width: 235px;
-            }
-        }
-
-
-    /* ARTICLE ACTIVITIES */
-
-#activities {
-    margin: 10px 20px 10px 20px;
-}
-
-#activity_list {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.activity {
-    max-width: 335px;
-    height: 190px;
-    overflow: hidden;
-    border-radius: 25px;
-    margin: 10px 0 10px 0;
-}
-
-.activity_picture img {
-    width: 100%;
-    height: 135px;
-}
-
-.activity_description h3 {
-    margin: 10px 0 0 15px;
-}
-    @media screen and (min-width: 900px) {
-        #activities {
-            margin: 10px 50px 10px 50px;
-        }
-
-        .activity {
-            width: 300px;
-            overflow: hidden;
-            margin: 10px 10px 10px 10px;
-        }
-
-        .activity_merge {
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-        
-        #activity2, #activity3, #activity5, #activity6 {
-            height: 210px;
-        }
-
-        #activity2 img, #activity3 img, #activity5 img, #activity6 img {
-            height: 160px;
-        }
-
-        #activity1, #activity4 {
-            height: 445px;
-        }
-
-        #activity1 img, #activity4 img {
-            height: 390px;
-        }
-    }
-
-    /* FOOTER  */
 footer {
     background-color: #F2F2F2;
-    /* padding: 30px 20px 30px 20px; */
-}
-#links ul {
-    padding: 0; /* utilisé pour supprimer le margin auto de ul */
-    margin: 5px 0 0 0;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5em;
 }
 
+/* -- links -- */
 #links {
-    padding: 40px 20px 40px 20px;
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 50px 0 0 0;
 }
+
 .links_list {
-    min-width: 250px;
-    margin: 0 0 25px 0;
-}
-#links li {
-    font-size: 0.9em;
+    flex: 1;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    height: fit-content;
+    min-width: 230px;
 }
 
-
-    @media screen and (min-width: 701px) {
-        footer {
-            display: flex;
-            justify-content: center;
-        }
-        #links {
-            display: flex;
-            justify-content: space-between;
-            line-height: 1.5em;
-            width: 1440px;
-            padding: 40px 50px 40px 50px;
-        }
+    @media screen and (min-width: 800px) {
         .links_list {
-            flex-grow: 1;
+            padding: 0 50px 0 50px;
         }
     }
+
+.links_list h3 {
+    padding: 0 0 15px 0;
+}
+.links_list ul {
+    margin: 0 0 50px 0;
+}
