@@ -1,11 +1,3 @@
-/* mobile design : basic design */
-tablet design : 
-    header : 
-    footer
-
-
-
-
 /* ------------------------- */
 /*                           */
 /*           SITE            */
@@ -36,7 +28,6 @@ body {
     max-width: 1440px;
     margin: auto;
 }
-
 
 /* ------------------------- */
 /*      specific elements    */
@@ -87,7 +78,6 @@ li {
 button:hover {
     cursor: pointer;
 }
-
 
 /* ------------------------- */
 /*                           */
@@ -160,7 +150,7 @@ header img {
         }
     }
 
-/* -- menn_style & navbar_style -- */
+/* -- menu_style & navbar_style -- */
 
 .menu_style {
     flex: 1;
@@ -185,27 +175,89 @@ header img {
         }
     }
 
-    
+
 /* ------------------------- */
 /*                           */
 /*          section          */
 /*                           */
 /* ------------------------- */
 
-    @media screen and (min-width: 800px) and (max-width: 1023px) {
-        #popular_hosting {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }   
+#popular_hosting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
     @media screen and (min-width: 1024px) {
         #popular_hosting {
-            display: flex;
             flex-direction: row-reverse;
+            margin: 50px;
         }
     }
+
+/* -- *_title -- */
+#popular_title, #hosting_title, .activity_title /* activity_title */ {
+    font-size: 1.2em;
+}
+
+/* -- *_list -- */
+#popular_list, #hosting_list, #activity_list {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    @media screen and (min-width: 700px) {
+        #popular_list, #hosting_list {
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+    }
+/* -- *_room -- */
+.popular_room, .hosting_room, .activity {
+    display: flex;
+    border-radius: 25px;
+    max-width: 320px;
+    background-color: var(--white);
+    margin: 5px 0 5px 0;
+    overflow: hidden;
+}
+.popular_room, .hosting_room {
+    border: var(--white) 5px solid;
+}
+
+.popular_room:hover, .hosting_room:hover, .activity:hover {
+    background-color: var(--secondary_color);
+}
+.popular_room:hover, .hosting_room:hover {
+    border: var(--primary_color) 5px solid;
+}
+
+.popular_room img, .hosting_room img, .activity img {
+    object-fit: cover;
+}
+
+.hosting_room, .activity {
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+}
+
+/* -- *_description -- */
+.popular_description .fas, .hosting_description .fas {
+    font-size: 0.8em;
+}
+.popular_description, .hosting_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.star_grey {
+    color: var(--four_color);
+}
 
 /* ------------------------- */
 /*           aside           */
@@ -235,7 +287,6 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-size: 1.2em;
     padding: 47px 0 20px 0;
 }
 #popular_title .fas {
@@ -248,43 +299,13 @@ aside {
         }
     }
 
-/* -- popular_list -- */
-#popular_list {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-    @media screen and (min-width: 700px) and (max-width: 1023px) {
-        #popular_list {
-            justify-content: space-evenly;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        #popular_display {
-            display: none;
-        }
-    }
-
 /* -- .popular_room -- */
 .popular_room {
-    display: flex;
-    max-width: 330px;
     height: 135px;
-    border-radius: 25px;
-    border: var(--white) 5px solid;
-    overflow: hidden;
-    background-color: var(--white);
-    margin: 5px 0 5px 0;
-}
-.popular_room:hover {
-    background-color: var(--secondary_color);
-    border: var(--primary_color) 5px solid;
-}
+    }
 .popular_room img {
     width: 128px;
     height: 100%;
-    object-fit: cover;
 }
 
     @media screen and (min-width: 700px) and (max-width: 1023px) {
@@ -306,148 +327,82 @@ aside {
     }
 
 /* -- popular_description -- */
-.popular_description .fas {
-    font-size: 0.8em;
-}
 .popular_description {
     padding: 15px 10px 10px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    }
-
-    /* -- popular_notation -- */
-.star_grey {
-    color: var(--four_color);
-}
-
-
-/* #popular_and_hosting {
-    display: flex;
-    flex-direction: column;
-}
-
-aside, #hosting {
-    padding: 20px 20px 20px 20px;
-    width: fit-content;
-}
-
-    @media screen and (min-width: 900px) {
-        #popular_and_hosting {
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            margin: 20px 50px 20px 50px;
-        }
-        
-        #hosting {
-            margin-right: 30px;
-        }
-        aside, #hosting {
-            padding: 40px 30px 20px 30px;
-            border-radius: 25px;
-            max-width: fit-content;
-        }
     }
 
 
+/* ------------------------- */
+/*                           */
+/*          HOSTING          */
+/*                           */
+/* ------------------------- */
 
-.room_picture img, .popular_room_picture img, .activity_picture img {
-    object-fit: cover;
+#hosting {
+    max-width: 880px;
 }
 
-.popular_room, .room {
-    border: 5px var(--white, white) solid;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 10px 0 10px 0;
-    padding: 0;
-}
-.popular_room, .room, .activity {
-    box-shadow: 1px 1px 12px var(--four_color, #D9D9D9);
-    background-color: var(--white, white);
+/* -- hosting_title -- */
+#hosting h2 {
+    padding: 40px 0 15px 20px;
 }
 
-.popular_room_description p, .room_description p {
-    margin: 0;
+/* -- hosting_list -- */
+#hosting_list {
+    padding: 0 20px 0 20px;
 }
 
-.popular_notation, .room_notation {
-    padding-bottom: 5px;
-    font-size: 0.85em;
+/* -- .hosting_room -- */
+.hosting_room {
+    margin: 5px 0 5px 0;
+}
+.hosting_room img {
+    height: 115px;
+    width: 100%;
 }
 
-.popular_room:hover, .room:hover, .activity:hover {
-    box-shadow: 1px 1px 12px #555;
-    cursor: zoom-in;
-}
-
-    @media screen and (min-width: 900px) {
-        .popular_room, .room {
-            margin: 30px 0 30px 0;
-        }
-    }   
-
-    .popular_room_description, .room_description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        line-height: 1.2em;
+/* -- hosting_description -- */
+.hosting_description {
+    padding: 10px 0 5px 10px;
     }
 
-
-ASIDE POPULAR
-
-aside {
-    background: var(--tertiary_color, #F2F2F2);
+/* see_more */
+#see_more {
+    padding: 35px 0 30px 20px;
 }
-    @media screen and (max-width: 899px) {
-        aside {
-        max-width: 420px;
-        }
-    }
-#popular_room_list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
+#see_more:hover {
+    text-decoration: underline;
 }
 
-#popular_room_list i {
-    color: var(--black, black);
+
+/* ------------------------- */
+/*                           */
+/*        ACTIVITIES         */
+/*                           */
+/* ------------------------- */
+
+#activities {
+    padding: 0 0 37px 0;
 }
 
-.popular_room {
-    display: flex;
-    flex-direction: row;
+/* -- activity_title -- */
+#activities h2 {
+    padding: 30px 0 30px 20px;
+}
+
+/* -- .hosting_room -- */
+.activity {
+    margin: 12px 0 12px 0;
+}
+.activity img {
     height: 135px;
+    width: 100%;
 }
 
-.popular_room_picture img {
-    width: 135px;
-    height: 100%;
-}
-.popular_room_description {
-    padding: 10px 15px 0 10px;
-} */
-
-
-/* ------------------------- */
-/*                           */
-/*        ACTIVITIES         */
-/*                           */
-/* ------------------------- */
-
-.room, .activity {
-    width: 300px;
-    overflow: hidden;
-}
-
-/* ------------------------- */
-/*                           */
-/*        ACTIVITIES         */
-/*                           */
-/* ------------------------- */
-
+/* -- hosting_description -- */
+.activity_description {
+    padding: 12px 0 5px 20px;
+    }
 
 
 /* ------------------------- */
