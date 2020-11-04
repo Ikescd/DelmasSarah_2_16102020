@@ -22,7 +22,7 @@
             </nav>
         </header>
 
-        <section id="searching_tool"> <!-- contain texte "Trouvez votre hébergement...", search by city + preferences filters -->
+        <div id="searching_tool"> <!-- contain texte "Trouvez votre hébergement...", search by city + preferences filters -->
                 
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p>
@@ -46,56 +46,56 @@
                     <h3>Filtres</h3>
 
                     <div id="filter_list">
-
                         <form class="filter_form" role="search">
-                            <div class="filter_icon">
-                                <i class="fas fa-money-bill-wave fa-lg"></i>
-                            </div>
-    
-                            <select class="filter_button">
-                                <option value="cheap">Économique</option>
-                            </select>
+                            <button class="filter_button">
+                                <div class="filter_icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+
+                            <option value="cheap">Économique</option>
+                            </button>
                         </form> <!-- search_form closin' form "Économique" -->
-    
-                        <form class="filter_form" role="search">
-                            <div class="filter_icon">
-                                <i class="fas fa-child fa-lg"></i>
-                            </div>
-    
-                            <select class="filter_button">
-                                <option value="family">Familial</option>
-                            </select>
-                        </form> <!-- search_form closin' form "Familial" -->
-    
-                        <form class="filter_form" role="search">
-                            <div class="filter_icon">
-                                <i class="fas fa-heart fa-lg"></i>
-                            </div>
-    
-                            <select class="filter_button">
-                                <option value="romantic">Romantique</option>
-                            </select>
-                        </form> <!-- search_form closin' form "Romantique -->
-    
-                        <form class="filter_form" role="search">
-                            <div class="filter_icon">
-                                <i class="fas fa-dog fa-lg"></i>
-                            </div>
 
-                            <select class="filter_button">
-                                <option value="ok_pet">Animaux autorisés</option>
-                            </select>
-                        </form> <!-- search_form closin' form "Animaux autorisés" -->
+                        <form class="filter_form" role="search">
+                            <button class="filter_button">
+                                <div class="filter_icon">
+                                    <i class="fas fa-child"></i>
+                                </div>
+
+                            <option value="cheap">Familial</option>
+                            </button>
+                        </form> <!-- search_form closin' form "Économique" -->
+
+                        <form class="filter_form" role="search">
+                            <button class="filter_button">
+                                <div class="filter_icon">
+                                    <i class="fas fas fa-heart"></i>
+                                </div>
+
+                            <option value="cheap">Romantique</option>
+                            </button>
+                        </form> <!-- search_form closin' form "Économique" -->
+
+                        <form class="filter_form" role="search">
+                            <button class="filter_button">
+                                <div class="filter_icon">
+                                    <i class="fas fa-dog"></i>
+                                </div>
+
+                            <option value="cheap">Animaux autorisés</option>
+                            </button>
+                        </form> <!-- search_form closin' form "Économique" -->
                     </div> <!-- filter_list closin' div -->
                 </div> <!-- filters closing div -->
 
-                <p>
+                <p id="filter_text">
                     <span id="info_icon"><i class="fas fa-info fa-xs"></i></span> 
                     Plus de 500 logements sont disponibles dans cette ville
                 </p>
-        </section> <!-- searching_tool closin' section -->
+        </div> <!-- searching_tool closin' div -->
         
         <section id="popular_hosting"> <!-- contains aside "Les plus populaires" and article "Hébergements-->
+
             <aside id="popular"> <!-- contains aside "Les plus populaires" -->
                 <div id="popular_title">
                     <h2>Les plus populaires</h2>

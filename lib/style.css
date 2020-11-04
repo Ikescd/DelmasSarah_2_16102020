@@ -164,7 +164,7 @@ header img {
     @media screen and (min-width: 800px) {
         .navbar_style {
             flex: 1;
-            padding: 45px 20px 45px 20px;
+            padding: 30px 20px 65px 20px;
             border-top: var(--white) solid 3px;
         }
         .navbar_style:hover {
@@ -175,6 +175,157 @@ header img {
         }
     }
 
+/* ------------------------- */
+/*                           */
+/*       searching_tool      */
+/*                           */
+/* ------------------------- */
+
+#searching_tool {
+    margin: 35px 20px 20px 20px;
+}
+
+#searching_tool p {
+    font-size: 1em;
+    padding: 15px 0 15px 0;
+}
+
+#searching_tool i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+input, button, option {
+    border: none;
+    font-family: "Raleway", sans serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#search_form, .filter_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 330px;
+    height: 48px;
+    background-color: var(--white);
+}
+
+/* ------------------------- */
+/*        search_form        */
+/* ------------------------- */
+
+#search_form {
+    border: var(--tertiary_color) 1px solid;
+}
+
+#search_form, #search_button {
+    border-radius: 15px;
+}
+
+#search_icon i, #search_button i {
+    height: 48px;
+}
+
+/* -- search_icon -- */
+#search_icon i {
+    border-radius: 15px 0 0 15px;
+    background-color: var(--tertiary_color);
+    color: var(--black);
+    margin: 0 0 -2px -2px;
+}
+
+/* -- input -- */
+#search_form input {
+    width: 230px;
+    padding: 0 0 0 20px;
+}
+
+/* -- search_button -- */
+#search_button i, #search_web, #search_button {
+    background-color: var(--primary_color);
+    color: var(--white);
+    margin: -1px;
+    border-radius: 15px;
+}
+
+#search_button:hover, #search_web, #search_button i:hover {
+    box-shadow: 0px 0px 15px -2px rgb(158, 150, 150);
+}
+
+#search_web {
+    display: none;
+}
+
+/* ------------------------- */
+/*          filters          */
+/* ------------------------- */
+
+#filters h3 {
+    margin: 37px 0 6px 0;
+}
+/* -- filter_list -- */
+#filter_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* -- filter_form -- */
+.filter_form {
+    border-radius: 25px;
+    margin: 6px 6px 6px 0;
+}
+
+
+/* -- filter_button -- */
+#filters button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    background-color: var(--white);
+    border: var(--tertiary_color) 2px solid;
+}
+
+#filters button:hover {
+    box-shadow: 0px 0px 15px -2px #555;
+}
+
+.filter_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: var(--secondary_color);
+    border: var(--secondary_color) 2px solid;
+    width: 48px;
+    height: 48px;
+    margin: -1px 0 -1px -3px;
+}
+
+#filters option {
+    padding: 10px;
+}
+
+#filter_text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+#info_icon i {
+    border: var(--four_color) 1px solid;
+    width: 22px;
+    height: 22px;
+    border-radius: 25px;
+    margin-right: 15px;
+}
 
 /* ------------------------- */
 /*                           */
@@ -219,10 +370,11 @@ header img {
 .popular_room, .hosting_room, .activity {
     display: flex;
     border-radius: 25px;
-    max-width: 320px;
+    max-width: 322px;
     background-color: var(--white);
     margin: 5px 0 5px 0;
     overflow: hidden;
+    box-shadow: 0px 0px 15px -2px rgb(158, 150, 150)
 }
 .popular_room, .hosting_room {
     border: var(--white) 5px solid;
@@ -238,6 +390,14 @@ header img {
 .popular_room img, .hosting_room img, .activity img {
     object-fit: cover;
 }
+
+/* .hosting_room img, .activity img {
+    margin: -5px -5px 0 -5px;
+}
+
+.popular_room {
+    margin: -5px 0 -5px -2px;
+} */
 
 .hosting_room, .activity {
     display: flex;
@@ -304,8 +464,8 @@ aside {
     height: 135px;
     }
 .popular_room img {
-    width: 128px;
-    height: 100%;
+    width: 130px;
+    height: 102%;
 }
 
     @media screen and (min-width: 700px) and (max-width: 1023px) {
@@ -358,7 +518,7 @@ aside {
 }
 .hosting_room img {
     height: 115px;
-    width: 100%;
+    width: 105%;
 }
 
 /* -- hosting_description -- */
@@ -389,6 +549,8 @@ aside {
 #activities h2 {
     padding: 30px 0 30px 20px;
 }
+
+/* -- activity_list -- */
 
 /* -- .hosting_room -- */
 .activity {
