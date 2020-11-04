@@ -336,12 +336,14 @@ input, button, option {
 #popular_hosting {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
     @media screen and (min-width: 1024px) {
         #popular_hosting {
             flex-direction: row-reverse;
+            justify-content: space-between;
             margin: 50px;
         }
     }
@@ -358,7 +360,7 @@ input, button, option {
     align-items: center;
 }
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 450px) {
         #popular_list, #hosting_list {
             justify-content: space-evenly;
             flex-direction: row;
@@ -391,14 +393,6 @@ input, button, option {
     object-fit: cover;
 }
 
-/* .hosting_room img, .activity img {
-    margin: -5px -5px 0 -5px;
-}
-
-.popular_room {
-    margin: -5px 0 -5px -2px;
-} */
-
 .hosting_room, .activity {
     display: flex;
     flex-direction: column;
@@ -428,17 +422,17 @@ aside {
     padding: 0px 20px 37px 20px;
 }
 
-    @media screen and (min-width: 450px) and (max-width: 1023px) {
+    @media screen and (min-width: 450px) {
         aside {
-            width: fit-content;
             border-radius: 25px;
-            margin: auto;
+            width: fit-content;
+            min-width: 420px;
         }
     }   
     @media screen and (min-width: 1024px) {
         aside {
-            width: 420px;
-            border-radius: 25px;
+            width: calc(100% - 880px);
+            margin-left: 15px;
         }
     }
 
@@ -465,19 +459,20 @@ aside {
     }
 .popular_room img {
     width: 130px;
-    height: 102%;
+    height: 100%;
 }
 
+    @media screen and (min-width: 450px) and (max-width: 1023px) {
+        #popular_display {
+            display: none;
+        }
+    }
     @media screen and (min-width: 700px) and (max-width: 1023px) {
         .popular_room {
             min-width: 250px;
             max-width: 300px;
             flex-direction: row;
             margin: 5px;
-        }
-
-        #popular_display {
-            display: none;
         }
     }
     @media screen and (min-width: 1024px) {
@@ -498,9 +493,31 @@ aside {
 /*                           */
 /* ------------------------- */
 
-#hosting {
-    max-width: 880px;
-}
+    @media screen and (min-width: 1024px) {
+        #hosting {
+            max-width: 880px;
+            background-color: var(--tertiary_color);
+            border-radius: 25px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+    @media screen and (min-width: 920px) and (max-width: 1024px) {
+        .hosting_display2 {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1060px) {
+        .hosting_display {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1061px) and (max-width: 1420px) {
+        .hosting_display2 {
+            display: none;
+        }
+    }
+
 
 /* -- hosting_title -- */
 #hosting h2 {
@@ -512,18 +529,47 @@ aside {
     padding: 0 20px 0 20px;
 }
 
+    @media screen and (min-width: 450px) {
+        #hosting_list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
 /* -- .hosting_room -- */
 .hosting_room {
-    margin: 5px 0 5px 0;
+    margin: 5px 5px 5px 5px;
 }
+
+    @media screen and (min-width: 475px) and (max-width: 699px) {
+        .hosting_room {
+            width: 200px;
+        }
+    }        
+    @media screen and (min-width: 700px) and (max-width: 840px) {
+        .hosting_room {
+            width: 300px;
+        }
+    }
+    @media screen and (min-width: 841px) and (max-width: 1150px) {
+        .hosting_room {
+            width: 200px;
+        }
+    }
+    @media screen and (min-width: 1151px) {
+        .hosting_room {
+            width: 247px;
+        }
+    }
+
 .hosting_room img {
     height: 115px;
-    width: 105%;
+    width: 100%;
 }
 
 /* -- hosting_description -- */
 .hosting_description {
-    padding: 10px 0 5px 10px;
+    padding: 10px 5px 5px 10px;
     }
 
 /* see_more */
