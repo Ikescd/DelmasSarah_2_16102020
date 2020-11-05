@@ -337,13 +337,23 @@ input, button, option {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
+    @media screen and (min-width: 700px) and (max-width: 1024px) {
+        #popular_hosting {
+            align-items: center;
+        }
+    }
     @media screen and (min-width: 1024px) {
         #popular_hosting {
             flex-direction: row-reverse;
             justify-content: space-between;
+            margin: 50px;
+        }
+
+    }
+    @media screen and (min-width: 1440px) {
+        #popular_hosting, #activity_section, #searching_tool {
             margin: 50px;
         }
     }
@@ -361,7 +371,7 @@ input, button, option {
 }
 
     @media screen and (min-width: 450px) {
-        #popular_list, #hosting_list {
+        #popular_list, #hosting_list, #activity_list {
             justify-content: space-evenly;
             flex-direction: row;
             flex-wrap: wrap;
@@ -500,6 +510,7 @@ aside {
             border-radius: 25px;
             margin-right: auto;
             margin-left: 0;
+            height: auto;
         }
     }
     @media screen and (min-width: 920px) and (max-width: 1024px) {
@@ -526,13 +537,14 @@ aside {
 
 /* -- hosting_list -- */
 #hosting_list {
-    padding: 0 20px 0 20px;
+    /* padding: 0 20px 0 20px; */
 }
 
     @media screen and (min-width: 450px) {
         #hosting_list {
             flex-direction: row;
             flex-wrap: wrap;
+            padding: none;
         }
     }
 
@@ -542,13 +554,13 @@ aside {
 }
 
     @media screen and (min-width: 475px) and (max-width: 699px) {
-        .hosting_room {
+        .hosting_room, .activity {
             width: 200px;
         }
     }        
     @media screen and (min-width: 700px) and (max-width: 840px) {
         .hosting_room {
-            width: 300px;
+            max-width: 300px;
         }
     }
     @media screen and (min-width: 841px) and (max-width: 1150px) {
@@ -596,16 +608,81 @@ aside {
     padding: 30px 0 30px 20px;
 }
 
-/* -- activity_list -- */
-
 /* -- .hosting_room -- */
 .activity {
-    margin: 12px 0 12px 0;
+    margin: 12px 5px 12px 5px;
 }
+
 .activity img {
     height: 135px;
     width: 100%;
 }
+
+    @media screen and (min-width: 700px) and (max-width: 1024px) {
+        .activity {
+            max-width: 300px;
+        }
+        .activity_size2, .activity_size5 {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .activity {
+            margin: 0 5px 0 5px;
+            max-width: 300px;
+        }
+        .activity_size1 {
+            height: 445px;
+        }
+        .activity_size1 img {
+            height: 390px;
+            width: 100%;
+        }
+        .activity_size2 {
+            height: 235px;
+        }
+        .activity_size2 img {
+            height: 180px;
+            width: 100%;
+        }
+        .activity_size3 {
+            height: 164px;
+        }
+        .activity_size3 img {
+            height: 109px;
+            width: 100%;
+        }
+        .activity_size4 {
+            height: 195px;
+        }
+        .activity_size4 img {
+            height: 140px;
+            width: 100%;
+        }
+        .activity_size5 {
+            height: 210px;
+        }
+        .activity_size5 img {
+            height: 155px;
+            width: 100%;
+        }
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1240px) {
+        .activity_size4, .activity_size5 {
+            display: none;
+        }
+    }
+#activity_23, #activity_45 {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    @media screen and (min-width: 1024px) {
+        #activity_23, #activity_45 {
+            height: 445px;
+            flex-direction: column;
+        }
+    }
 
 /* -- hosting_description -- */
 .activity_description {
