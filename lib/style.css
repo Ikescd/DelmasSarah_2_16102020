@@ -332,7 +332,9 @@ input, button, option {
 /*          section          */
 /*                           */
 /* ------------------------- */
-
+#popular, #hosting, #activity_section {
+    padding: 20px;
+}
 #popular_hosting {
     display: flex;
     flex-direction: column;
@@ -342,18 +344,18 @@ input, button, option {
     @media screen and (min-width: 700px) and (max-width: 1024px) {
         #popular_hosting {
             align-items: center;
+            margin: 0 50px 0 50px;
         }
     }
     @media screen and (min-width: 1024px) {
         #popular_hosting {
             flex-direction: row-reverse;
             justify-content: space-between;
-            margin: 50px;
         }
 
     }
     @media screen and (min-width: 1440px) {
-        #popular_hosting, #activity_section, #searching_tool {
+        #popular_hosting, #searching_tool {
             margin: 50px;
         }
     }
@@ -361,6 +363,13 @@ input, button, option {
 /* -- *_title -- */
 #popular_title, #hosting_title, .activity_title /* activity_title */ {
     font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width: 700px) {
+    #popular_title, #hosting_title, #activity_title {
+        padding: 27px 15px 10px 15px;
+    }
 }
 
 /* -- *_list -- */
@@ -429,19 +438,18 @@ input, button, option {
 
 aside {
     background-color: var(--tertiary_color);
-    padding: 0px 20px 37px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
     @media screen and (min-width: 450px) {
         aside {
             border-radius: 25px;
-            width: fit-content;
-            min-width: 420px;
         }
     }   
     @media screen and (min-width: 1024px) {
         aside {
-            width: calc(100% - 880px);
+            width: 420px;
             margin-left: 15px;
         }
     }
@@ -450,22 +458,16 @@ aside {
 #popular_title {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    padding: 47px 0 20px 0;
+    align-items: flex-start;
 }
 #popular_title .fas {
     color: var(--black);
 }
 
-    @media screen and (min-width: 1024px) {
-        #popular_title {
-            padding: 47px 0 27px 0;
-        }
-    }
-
 /* -- .popular_room -- */
 .popular_room {
     height: 135px;
+    margin: 15px 5px 15px 5px;
     }
 .popular_room img {
     width: 130px;
@@ -482,7 +484,6 @@ aside {
             min-width: 250px;
             max-width: 300px;
             flex-direction: row;
-            margin: 5px;
         }
     }
     @media screen and (min-width: 1024px) {
@@ -508,8 +509,7 @@ aside {
             max-width: 880px;
             background-color: var(--tertiary_color);
             border-radius: 25px;
-            margin-right: auto;
-            margin-left: 0;
+            margin: 0 20px 0 0;
             height: auto;
         }
     }
@@ -530,27 +530,17 @@ aside {
     }
 
 
-/* -- hosting_title -- */
-#hosting h2 {
-    padding: 40px 0 15px 20px;
-}
-
 /* -- hosting_list -- */
-#hosting_list {
-    /* padding: 0 20px 0 20px; */
-}
-
     @media screen and (min-width: 450px) {
         #hosting_list {
             flex-direction: row;
             flex-wrap: wrap;
-            padding: none;
         }
     }
 
 /* -- .hosting_room -- */
 .hosting_room {
-    margin: 5px 5px 5px 5px;
+    margin: 15px 5px 15px 5px;
 }
 
     @media screen and (min-width: 475px) and (max-width: 699px) {
@@ -570,7 +560,7 @@ aside {
     }
     @media screen and (min-width: 1151px) {
         .hosting_room {
-            width: 247px;
+            width: 237px;
         }
     }
 
@@ -586,7 +576,7 @@ aside {
 
 /* see_more */
 #see_more {
-    padding: 35px 0 30px 20px;
+    padding: 35px 20px 15px 0;
 }
 #see_more:hover {
     text-decoration: underline;
@@ -599,16 +589,26 @@ aside {
 /*                           */
 /* ------------------------- */
 
-#activities {
-    padding: 0 0 37px 0;
-}
-
 /* -- activity_title -- */
+
+    @media screen and (min-width: 1440px) {
+        #popular_hosting, #searching_tool {
+            margin: 30px;
+        }
+    }
+
 #activities h2 {
-    padding: 30px 0 30px 20px;
+    font-size: 1.4em;
 }
 
-/* -- .hosting_room -- */
+    @media screen and (min-width: 700px) {
+        #activities h2 {
+            font-size: 1.4em;
+            padding: 0 0 30px 0;
+        }
+    }
+
+/* -- .activity -- */
 .activity {
     margin: 12px 5px 12px 5px;
 }
@@ -631,58 +631,62 @@ aside {
             margin: 0 5px 0 5px;
             max-width: 300px;
         }
-        .activity_size1 {
+    }
+
+#activity_23, #activity_45 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+    @media screen and (min-width: 1024px) {
+        #activity_23, #activity_45 {
             height: 445px;
         }
-        .activity_size1 img {
-            height: 390px;
-            width: 100%;
+
+    }    @media screen and (min-width: 1024px) {
+        .activity_size1 {
+            height: 445px;
         }
         .activity_size2 {
             height: 235px;
         }
-        .activity_size2 img {
-            height: 180px;
-            width: 100%;
-        }
         .activity_size3 {
             height: 164px;
-        }
-        .activity_size3 img {
-            height: 109px;
-            width: 100%;
         }
         .activity_size4 {
             height: 195px;
         }
-        .activity_size4 img {
-            height: 140px;
-            width: 100%;
-        }
         .activity_size5 {
             height: 210px;
         }
-        .activity_size5 img {
-            height: 155px;
+
+        .activity_size1 img, .activity_size2 img, .activity_size3 img, .activity_size4 img, .activity_size5 img {
             width: 100%;
         }
+        .activity_size2 img {
+            height: 180px;
+        }
+        .activity_size1 img {
+            height: 390px;
+        }
+        .activity_size3 img {
+            height: 109px;
+        }
+        .activity_size4 img {
+            height: 140px;
+        }
+        .activity_size5 img {
+            height: 155px;
+        }
     }
+
     @media screen and (min-width: 1024px) and (max-width: 1240px) {
         .activity_size4, .activity_size5 {
             display: none;
         }
     }
-#activity_23, #activity_45 {
-        display: flex;
-        justify-content: space-between;
-        align-content: space-between;
-    }
-    @media screen and (min-width: 1024px) {
-        #activity_23, #activity_45 {
-            height: 445px;
-            flex-direction: column;
-        }
-    }
+
 
 /* -- hosting_description -- */
 .activity_description {
