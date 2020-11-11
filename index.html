@@ -9,6 +9,7 @@
     <title>Reservia</title> <!-- visible name on the navtab -->
 </head>
 
+
 <body>
     <div id="bloc_page"> <!-- do not contain the footer bc of the background footer -->
         <header> <!-- contains logo "Reservia", inscription "s'inscrire" + nav "hébergements" and "activités" -->
@@ -22,7 +23,7 @@
             </nav>
         </header>
 
-        <div id="searching_tool"> <!-- contain texte "Trouvez votre hébergement...", search by city + preferences filters -->
+        <main id="searching_tool"> <!-- contain texte "Trouvez votre hébergement...", search by city + preferences filters -->
                 
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p>
@@ -40,59 +41,51 @@
                         <i class="fas fa-search fa-lg icons" id="lens_icon"></i>
                     </span>
                 </button>
-            </form> <!-- search_form closin' form -->
+            </form>
 
-            <div id="filters"> <!-- preferences filters -->
-                    <h3>Filtres</h3>
+            <div id="filters">
+                <h3>Filtres</h3>
+            
+                <div id="filter_list">
+                    <div class="filter_button">
+                        <div class="filter_icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+        
+                        <p>Économique</p>
+                    </div>
+            
+                    <div class="filter_button">
+                        <div class="filter_icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+        
+                        <p>Familial</p>
+                    </div>
+            
+                    <div class="filter_button">
+                        <div class="filter_icon">
+                            <i class="fas fas fa-heart"></i>
+                        </div>
+        
+                        <p>Romantique</p>
+                    </div>
+            
+                    <div class="filter_button">
+                        <div class="filter_icon">
+                            <i class="fas fa-dog"></i>
+                        </div>
+        
+                        <p>Animaux autorisés</p>
+                    </div>
+                </div>
+            </div>
 
-                    <div id="filter_list">
-                        <form class="filter_form" role="search">
-                            <button class="filter_button">
-                                <div class="filter_icon">
-                                    <i class="fas fa-money-bill-wave"></i>
-                                </div>
-
-                            <option value="cheap">Économique</option>
-                            </button>
-                        </form> <!-- search_form closin' form "Économique" -->
-
-                        <form class="filter_form" role="search">
-                            <button class="filter_button">
-                                <div class="filter_icon">
-                                    <i class="fas fa-child"></i>
-                                </div>
-
-                            <option value="cheap">Familial</option>
-                            </button>
-                        </form> <!-- search_form closin' form "Économique" -->
-
-                        <form class="filter_form" role="search">
-                            <button class="filter_button">
-                                <div class="filter_icon">
-                                    <i class="fas fas fa-heart"></i>
-                                </div>
-
-                            <option value="cheap">Romantique</option>
-                            </button>
-                        </form> <!-- search_form closin' form "Économique" -->
-
-                        <form class="filter_form" role="search">
-                            <button class="filter_button">
-                                <div class="filter_icon">
-                                    <i class="fas fa-dog"></i>
-                                </div>
-
-                            <option value="cheap">Animaux autorisés</option>
-                            </button>
-                        </form> <!-- search_form closin' form "Économique" -->
-                    </div> <!-- filter_list closin' div -->
-                </div> <!-- filters closing div -->
-
-                <p id="filter_text">
-                    <span id="info_icon"><i class="fas fa-info fa-xs"></i></span> 
-                    Plus de 500 logements sont disponibles dans cette ville
-                </p>
-        </div> <!-- searching_tool closin' div -->
+            <p id="filter_text">
+                <span id="info_icon"><i class="fas fa-info fa-xs"></i></span> 
+                Plus de 500 logements sont disponibles dans cette ville
+            </p>
+        </main> <!-- searching_tool closin' div -->
         
         <section id="popular_hosting"> <!-- contains aside "Les plus populaires" and article "Hébergements-->
 
@@ -122,7 +115,7 @@
                         </div> <!-- popular_description closin' div -->
                     </a> <!-- .popular_room closin' a -->
 
-                    <a href="#" id="popular_display" class="popular_room">
+                    <a href="#" class="popular_room">
                         <div class="popular_picture">
                             <img src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre Au coeur de l'eau, Chambre d'Hôtes">
                         </div> <!-- .popular_picture closin' div -->
@@ -141,7 +134,7 @@
                         </div> <!-- popular_description closin' div -->
                     </a> <!-- .popular_room closin' a -->
 
-                    <a href="#" class="popular_room">
+                    <a href="#" class="popular_room" id="popular_display">
                         <div class="popular_picture">
                             <img src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre de l'Hôtel Tout bleu et blanc">
                         </div> <!-- .popular_picture closin' div -->
@@ -168,7 +161,7 @@
                 </div>
                 
                 <div id="hosting_list">
-                    <a href="#" class="hosting_room hosting_display">
+                    <a href="#" class="hosting_room">
                         <div class="hosting_picture">
                             <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre de l'Auberge de la Cannebière">
                         </div> <!-- .popular_picture closin' div -->
@@ -187,7 +180,7 @@
                         </div> <!-- popular_description closin' div -->
                     </a> <!-- .popular_room closin' a -->
 
-                    <a href="#" class="hosting_room hosting_display">
+                    <a href="#" class="hosting_room">
                         <div class="hosting_picture">
                             <img src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre de l'Hôtel du port">
                         </div> <!-- .popular_picture closin' div -->
@@ -206,7 +199,7 @@
                         </div> <!-- popular_description closin' div -->
                     </a> <!-- .popular_room closin' a -->
 
-                    <a href="#" class="hosting_room hosting_display2">
+                    <a href="#" class="hosting_room">
                         <div class="hosting_picture">
                             <img src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre de l'Hôtel Les mouettes">
                         </div> <!-- .popular_picture closin' div -->
@@ -225,7 +218,7 @@
                         </div> <!-- popular_description closin' div -->
                     </a> <!-- .popular_room closin' a -->
 
-                    <a href="#" class="hosting_room hosting_display2">
+                    <a href="#" class="hosting_room">
                         <div class="hosting_picture">
                             <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre de l'Hôtel de la mer">
                         </div> <!-- .popular_picture closin' div -->
@@ -244,7 +237,7 @@
                         </div> <!-- popular_description closin' div -->
                     </a> <!-- .popular_room closin' a -->
 
-                    <a href="#" class="hosting_room">
+                    <a href="#" class="hosting_room hosting_display">
                         <div class="hosting_picture">
                             <img src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre de l'Auberge Le Panier">
                         </div> <!-- .popular_picture closin' div -->
@@ -263,7 +256,7 @@
                         </div> <!-- popular_description closin' div -->
                     </a> <!-- .popular_room closin' a -->
 
-                    <a href="#" class="hosting_room">
+                    <a href="#" class="hosting_room hosting_display">
                         <div class="hosting_picture">
                             <img src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre de l'Hôtel chez Amina">
                         </div> <!-- .popular_picture closin' div -->
@@ -294,83 +287,87 @@
                     <h2>Activités à Marseille</h2>
                 </div>
                 <div id="activity_list">
-                    <a href="#" class="activity_size1 activity">
-                        <div class="activity_picture">
-                            <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">
-                        </div> <!-- .activity_picture closin' div -->
-                        
-                        <div class="activity_description">
-                            <div>
-                                <h3>Vieux Port</h3>
-                            </div> <!-- closin' div -->
-                        </div> <!-- activity_description closin' div -->
-                    </a> <!-- .activity closin' a -->
-                    
-                    <div id="activity_23">
-                        <a href="#" class="activity_size2 activity">
+                    <div class="activity_bloc activity_bloc1">
+                        <a href="#" class="activity activity1">
                             <div class="activity_picture">
-                                <img src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues">
+                                <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">
                             </div> <!-- .activity_picture closin' div -->
                             
                             <div class="activity_description">
                                 <div>
-                                    <h3>Fort de Pomègues</h3>
+                                    <h3>Vieux Port</h3>
                                 </div> <!-- closin' div -->
                             </div> <!-- activity_description closin' div -->
                         </a> <!-- .activity closin' a -->
-        
-                        <a href="#" class="activity_size3 activity">
-                            <div class="activity_picture">
-                                <img src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul">
-                            </div> <!-- .activity_picture closin' div -->
-                            
-                            <div class="activity_description">
-                                <div>
-                                    <h3>Îles du Frioul</h3>
-                                </div> <!-- closin' div -->
-                            </div> <!-- activity_description closin' div -->
-                        </a> <!-- .activity closin' a -->
-                    </div>
     
-                    <a href="#" class="activity_size1 activity">
-                        <div class="activity_picture">
-                            <img src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
-                        </div> <!-- .activity_picture closin' div -->
-                        
-                        <div class="activity_description">
-                            <div>
-                                <h3>Parc National des Calanques</h3>
-                            </div> <!-- closin' div -->
-                        </div> <!-- activity_description closin' div -->
-                    </a> <!-- .activity closin' a -->
-
-                    <div id="activity_45">
-                        <a href="#" class="activity_size4 activity">
-                            <div class="activity_picture">
-                                <img src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-De-La-Garde">
-                            </div> <!-- .activity_picture closin' div -->
-                            
-                            <div class="activity_description">
-                                <div>
-                                    <h3>Notre-Dame-De-La-Garde</h3>
-                                </div> <!-- closin' div -->
-                            </div> <!-- activity_description closin' div -->
-                        </a> <!-- .activity closin' a -->
-        
-                        <a href="#" class="activity_size5 activity">
-                            <div class="activity_picture">
-                                <img src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
-                            </div> <!-- .activity_picture closin' div -->
-                            
-                            <div class="activity_description">
-                                <div>
-                                    <h3>Parc Longchamp</h3>
-                                </div> <!-- closin' div -->
-                            </div> <!-- activity_description closin' div -->
-                        </a> <!-- .activity closin' a -->
-                    </div> <!-- .activity_list closin' a -->
+                        <div class="double_activity">
+                            <a href="#" class="activity activity2">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues">
+                                </div> <!-- .activity_picture closin' div -->
+                                
+                                <div class="activity_description">
+                                    <div>
+                                        <h3>Fort de Pomègues</h3>
+                                    </div> <!-- closin' div -->
+                                </div> <!-- activity_description closin' div -->
+                            </a> <!-- .activity closin' a -->
+            
+                            <a href="#" class="activity  activity3">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul">
+                                </div> <!-- .activity_picture closin' div -->
+                                
+                                <div class="activity_description">
+                                    <div>
+                                        <h3>Îles du Frioul</h3>
+                                    </div> <!-- closin' div -->
+                                </div> <!-- activity_description closin' div -->
+                            </a> <!-- .activity closin' a -->
+                        </div>
                     </div>
-                    
+
+                    <div class="activity_bloc activity_bloc2">
+                        <a href="#" class="activity activity1">
+                            <div class="activity_picture">
+                                <img src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                            </div> <!-- .activity_picture closin' div -->
+                            
+                            <div class="activity_description">
+                                <div>
+                                    <h3>Parc National des Calanques</h3>
+                                </div> <!-- closin' div -->
+                            </div> <!-- activity_description closin' div -->
+                        </a> <!-- .activity closin' a -->
+    
+                        <div class="double_activity">
+                            <a href="#" class="activity  activity4">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-De-La-Garde">
+                                </div> <!-- .activity_picture closin' div -->
+                                
+                                <div class="activity_description">
+                                    <div>
+                                        <h3>Notre-Dame-De-La-Garde</h3>
+                                    </div> <!-- closin' div -->
+                                </div> <!-- activity_description closin' div -->
+                            </a> <!-- .activity closin' a -->
+            
+                            <a href="#" class="activity  activity5">
+                                <div class="activity_picture">
+                                    <img src="./images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
+                                </div> <!-- .activity_picture closin' div -->
+                                
+                                <div class="activity_description">
+                                    <div>
+                                        <h3>Parc Longchamp</h3>
+                                    </div> <!-- closin' div -->
+                                </div> <!-- activity_description closin' div -->
+                            </a> <!-- .activity closin' a -->
+                        </div>
+                    </div>
+
+                </div>
             </article>
         </section>
     </div> <!-- div fermante de bloc_page -->
