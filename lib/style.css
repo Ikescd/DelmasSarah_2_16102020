@@ -296,7 +296,7 @@ input, button, option {
 /* ------------------------- */
 
 #popular_hosting h2 {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 #popular_title, #popular_list, .popular_room, .popular_description, 
@@ -553,9 +553,9 @@ footer {
     /* ------------------------- */
     /*        activities         */
     /* ------------------------- */
-
+    
     .activity {
-        max-width: 300px;
+        width: 300px;
     }
 
     /* ------------------------- */
