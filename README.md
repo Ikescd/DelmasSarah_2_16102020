@@ -1,7 +1,8 @@
 # DelmasSarah_2_16102020
 
 Reservia - Openclassrooms : projet 2
-/EN COURS/
+
+Lien gitpages : https://ikeket.github.io/DelmasSarah_2_16102020/
 
 
 Lien du projet : à venir

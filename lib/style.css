@@ -296,7 +296,7 @@ input, button, option {
 /* ------------------------- */
 
 #popular_hosting h2 {
-    padding: 20px 0;
+    padding: 20px 20px;
 }
 
 #popular_title, #popular_list, .popular_room, .popular_description, 
@@ -466,7 +466,7 @@ footer {
 /*                                                                */
 /* -------------------------------------------------------------- */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 
     /* ------------------------- */
     /*                           */
@@ -551,6 +551,34 @@ footer {
     }
 
     /* ------------------------- */
+    /*      popular_hosting      */
+    /* ------------------------- */
+
+    #popular_hosting h2 {
+        margin-left: 20px;
+    }
+
+    #popular_title {
+        margin-right: 20px;
+    }
+
+    #popular_hosting {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    #popular, #hosting {
+        border-radius: 25px;
+    }
+
+    .hosting_room {
+        width: 300px;
+    }
+
+
+
+    /* ------------------------- */
     /*        activities         */
     /* ------------------------- */
     
@@ -582,7 +610,7 @@ footer {
 /* -------------------------------------------------------------- */
 
 
-@media screen and (min-width: 600px) and (max-width: 1023px) {
+@media screen and (min-width: 700px) and (max-width: 1023px) {
     
     /* ------------------------- */
     /*                           */
@@ -594,10 +622,19 @@ footer {
         display: none;
     }
 
-    #hosting_title h2 {
+    #hosting_title h2, 
+    #activity_title h2 {
         margin-top: 20px;
     }
 
+    .popular_room, 
+    .hosting_room {
+        width: 300px;
+    }
+
+    #activity_title h2 {
+        margin-left: 50px;
+    }
 
     /* ------------------------- */
     /*                           */
@@ -618,16 +655,17 @@ footer {
 /* -------------------------------------------------------------- */
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-    .hosting_display {
-        display: none;
+    .activity {
+        min-width: 500px;
     }
 
-    .activity {
-        width: 250px;
+    #activity_title h2 {
+        margin-left: 50px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 1440px) {
     
     /* ------------------------- */
     /*                           */
@@ -635,22 +673,9 @@ footer {
     /*                           */
     /* ------------------------- */
 
-    #popular_hosting h2 {
-        margin-left: 50px;
-    }
-
-    #popular_title {
-        margin-right: 20px;
-    }
-
     #popular_hosting {
-        display: flex;
         flex-direction: row-reverse;
-        margin: 0 50px 0 50px;
-    }
-
-    #popular, #hosting {
-        border-radius: 25px;
+        margin: 50px;
     }
 
     /* ------------------------- */
@@ -679,6 +704,7 @@ footer {
     .hosting_room {
         width: 235px;
     }
+
 
     /* ------------------------- */
     /*        activities         */
