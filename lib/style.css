@@ -713,9 +713,16 @@ footer {
         padding: 15px 0 15px 0;
     }
 
+    #hosting_list {
+        width: 880px;
+        justify-content: space-between;
+        margin: 20px;
+    }
     .hosting_room {
         width: 235px;
     }
+    
+
 
 
     /* ------------------------- */
