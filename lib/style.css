@@ -690,6 +690,11 @@ footer {
         flex-direction: row-reverse;
     }
 
+    #popular_hosting h2 {
+        margin-left: 20px;
+        margin-bottom: 25px;
+    }
+
     /* ------------------------- */
     /*          popular          */
     /* ------------------------- */
@@ -722,9 +727,6 @@ footer {
         width: 235px;
     }
     
-
-
-
     /* ------------------------- */
     /*        activities         */
     /* ------------------------- */
