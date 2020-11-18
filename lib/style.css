@@ -654,7 +654,18 @@ footer {
 /*                                                                */
 /* -------------------------------------------------------------- */
 
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
+    #popular_display {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
+
+    #popular_hosting {
+        margin: 50px;
+    }
+
     .activity {
         min-width: 500px;
     }
@@ -663,7 +674,6 @@ footer {
         margin-left: 50px;
     }
 }
-
 
 @media screen and (min-width: 1440px) {
     
@@ -675,7 +685,6 @@ footer {
 
     #popular_hosting {
         flex-direction: row-reverse;
-        margin: 50px;
     }
 
     /* ------------------------- */
