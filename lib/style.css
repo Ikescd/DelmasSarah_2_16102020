@@ -54,6 +54,9 @@ a:hover {
     color: var(--primary-color);
 }
 
+.star_grey {
+    color: var(--four-color);
+}
 
 /* -- title & text -- */
 h1 {
