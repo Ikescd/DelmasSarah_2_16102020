@@ -2,10 +2,6 @@
 
 Reservia - Openclassrooms : projet 2
 
-Lien gitpages : https://ikeket.github.io/DelmasSarah_2_16102020/
-
-
-Lien du projet : à venir
 
 Description :
 Transformez une maquette en site web
