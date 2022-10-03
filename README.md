@@ -1,4 +1,4 @@
-# DelmasSarah_2_16102020
+# RESERVIA
 
 Reservia - Openclassrooms : projet 2
 
