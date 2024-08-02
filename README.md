@@ -1,7 +1,6 @@
 # RESERVIA
 
 Reservia - Openclassrooms : projet 2
-https://ikescd.github.io/Delmas_Sarah_Reservia/
 
 Description :
 Transformez une maquette en site web
